@@ -1,0 +1,240 @@
+#map {
+    height: 25rem;
+    width: 24rem;
+    border-radius: 0rem;
+    margin-top: -15rem;
+}
+
+.mapboss {
+    display: flex;
+    justify-content: center;
+}
+
+.marker {
+    background-image: url('mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+//explanation box
+$bkg: #f7f8fc;
+$l-grad-hex-100: #efeff6;
+$l-grad-rgba-100: rgba(179,
+202,
+226,
+0.28);
+$d-grad-100: dark;
+.neumorphism {
+    background-color: #e0e5ec;
+    //dark
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    //light
+    //box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #FFFFFF;
+}
+
+.card-w {
+    .card20 {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        padding: 60px 30px;
+        border-radius: 30px;
+        height: 3rem;
+        margin-top: 10rem;
+        margin-left: -23.2rem;
+        width: 23rem;
+        position: fixed;
+        background: transparent;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+
+/* inset */
+
+.card20.inset {
+    box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
+    i {
+        text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
+    }
+}
+
+.card20.active {
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5), inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
+    background: linear-gradient(318.32deg, rgba(163, 177, 198, 0.1) 0%, rgba(163, 177, 198, 0.1) 55%, rgba(163, 177, 198, 0.25) 100%);
+}
+
+//backbutton
+.btn {
+    margin: 1rem;
+    &-jittery {
+        animation: jittery 4s infinite;
+    }
+    &-icon {
+        position: relative;
+        margin-left: 8px;
+        overflow: hidden;
+        i {
+            position: absolute;
+            top: 41%;
+            left: 48%;
+            transform: scale(0.75) translate(-16%, 400%);
+            transition: 0.2s;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+        &:hover {
+            i {
+                transform: scale(0.75) translate(-16%, 0);
+            }
+            span {
+                transform: translateY(-400%);
+            }
+        }
+        @keyframes jittery {
+            5%,
+            50% {
+                transform: scale(1);
+            }
+            10% {
+                transform: scale(0.9);
+            }
+            15% {
+                transform: scale(1.15);
+            }
+            20% {
+                transform: scale(1.15) rotate(-5deg);
+            }
+            25% {
+                transform: scale(1.15) rotate(5deg);
+            }
+            30% {
+                transform: scale(1.15) rotate(-3deg);
+            }
+            35% {
+                transform: scale(1.15) rotate(2deg);
+            }
+            40% {
+                transform: scale(1.15) rotate(0);
+            }
+        }
+    }
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: -1rem;
+}
+
+.form-check-label {
+    margin-bottom: 0;
+    margin-left: -1rem;
+}
+
+.newseperator {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 2rem !important;
+}
+
+.my-3 {
+    font-family: 'Fredoka One', cursive !important;
+}
+
+.card__text {
+    margin-top: -3 !important;
+    margin-top: -1.5rem;
+}
+
+$time: 330ms;
+$btns: ( alpha: ( gstart: #7bf1a8, gend: #7bf1a8, tstart: #f0f4f5, tend: #f0f4f5),
+beta: ( gstart: #08AEEA, gend: #2AF598, tstart: #2AF598, tend: #08AEEA),
+gamma: ( gstart: #FEE140, gend: #FA709A, tstart: #FA709A, tend: #FEE140),
+delta: ( gstart: #3EECAC, gend: #EE74E1, tstart: #EE74E1, tend: #3EECAC));
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.newmapbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.btnnn {
+    font-family: 'Fredoka One', cursive !important;
+    font-weight: 900;
+    padding: 1.25rem 2rem;
+    font-size: 1rem;
+    border-radius: 3.5rem / 100%;
+    position: relative;
+    min-width: 15rem;
+    max-width: 90vw;
+    overflow: hidden;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all $time;
+    &+& {
+        margin-top: 1rem;
+    }
+    span {
+        position: relative;
+        z-index: 1;
+    }
+    &:before {
+        content: "";
+        background-color: #21D4FD;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale(4) translateX(-100%);
+        transition: all $time * 1.5 ease-out;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        &:before {
+            transform: scale(4) translate(37%);
+        }
+    }
+}
+
+@each $bname,
+$bcolors in $btns {
+    .btn--#{$bname} {
+        background-color: map-get($bcolors, gstart);
+        color: map-get($bcolors, tstart);
+        &:before {
+            background-color: map-get($bcolors, gend);
+            background-image: linear-gradient(to right, map-get($bcolors, gend) 30%, map-get($bcolors, gstart) 100%);
+            position: absolute;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            color: map-get($bcolors, tend);
+        }
+    }
+}

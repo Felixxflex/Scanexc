@@ -1,0 +1,30 @@
+<div class="newback">
+<h1 class="newcardtitle">This Month :</h1>
+<div class="newoptions">
+<div class="multi-button">
+  <a href="/offers"><button>Offers</button></a>
+  <a href="/sneakers"><button>Sneakers</button></a>
+  <a href="/sports"><button>Sports</button></a>
+</div>
+</div>
+
+<div class="masonry">
+  <div class="grid">
+    <%@offers.each do |offer|%>
+    <%= cl_image_tag offer.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%> 
+    <div class="grid__body">
+      <div class="relative">
+        <a class="grid__link" target="_blank" href="/" ></a>
+         <%= link_to offer_path(offer) do %> 
+        <h1 class="grid__title"><%= offer.title %></h1>
+      </div>
+      <div class="mt-auto" >
+        <span class="grid__tag"><%=offer.points%></span>
+      </div>
+      <%end%>
+    </div>
+  </div>
+  </div>
+</div>
+
+<%end%>

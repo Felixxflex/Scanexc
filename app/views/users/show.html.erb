@@ -1,0 +1,47 @@
+<div class="newprofilecard">
+<input id="slider" class="customSlider" type="checkbox">
+
+
+<div class="wrapper2">
+	<div class="top-icons">
+		<a href="/"><i class="fas fa-long-arrow-alt-left"></i></a>
+	
+	</div>
+	
+	<div class="profile">
+    <div class="centerprofile">
+    <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "rounded-circle" %>
+          <% elsif current_user.avatar_url? %>
+          <%= image_tag current_user.avatar_url, class: "rounded-circle" %>
+          <% else %>
+          <%= image_tag src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1610914953/IMG_3320_2_p1ux2a.jpg", class: "rounded-circle" %>
+          <% end %>
+	</div>
+		<h4 class="name"><%= current_user.username %></h4>
+		<p class="title"><%= current_user.full_name %></p>
+		<h1 class="description">150 PTS</h1>
+		<a href="/sports"><button type="button" class="btn345">Go Shop</button></a>
+	</div>
+	<div class="social-icons">
+		<div class="icon">
+			<h4 class="newh4">Delivery Info : <br>
+            <%= current_user.city %> <br>
+            <%= current_user.house_number %> <%= current_user.street_name %> <br>
+            <%= current_user.plz %>
+            </h4> 
+			
+			
+		</div>
+		
+
+			
+		</div>
+		
+		
+		
+		</div>
+	</div>
+	
+</div>
+</div>

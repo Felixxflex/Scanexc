@@ -1,0 +1,101 @@
+<div class="newcontact">
+  <div class="wrapper">
+      <div class="form">
+      <h1 class="newcardtitlelogin">Welcome to Scanexc !</h1>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      
+      
+       <div class="form-inputs">
+       <%= f.input :username,
+        required: true,
+        autofocus: true,
+        class: "form control",
+        type: "text",
+        placeholder: "Username"
+        %>
+         <%= f.input :full_name,
+        required: true,
+        autofocus: true,
+        class: "name formEntry",
+        type: "text",
+        placeholder: "First and Lastname"
+        %>
+        <%= f.input :email,
+        required: true,
+        autofocus: true,
+        input_html: { autocomplete: "email" },
+        class: "email1 formEntry",
+        type: "text",
+        placeholder: "Email"
+        %>
+        <%= f.input :password,
+        required: true,
+        # hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+        input_html: { autocomplete: "new-password" } ,
+        class: "name formEntry",
+        type: "text",
+        placeholder: "Password"
+        %>
+        <%= f.input :password_confirmation,
+        required: true,
+        input_html: { autocomplete: "new-password" },
+        class: "name formEntry",
+        type: "text",
+        placeholder: "Confirm Password"
+        %>
+       <div class="field">
+        <%= f.input :photo, label: 'Avatar', as: :file %>
+
+      <h1 class="newcardtitlelogin">Delivery Information</h1>
+      <%= f.input :house_number,
+        required: true,
+        autofocus: true,
+        class: "form control",
+        type: "text",
+        placeholder: "House Number"
+        %>
+        <%= f.input :street_name,
+        required: true,
+        autofocus: true,
+        class: "form control",
+        type: "text",
+        placeholder: "Street"
+        %>
+        <%= f.input :city,
+        required: true,
+        autofocus: true,
+        class: "form control",
+        type: "text",
+        placeholder: "City"
+        %>
+        <%= f.input :plz,
+        required: true,
+        autofocus: true,
+        class: "form control",
+        type: "text",
+        placeholder: "Plz"
+        %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+
+      
+      
+      
+
+      
+       <div class="form-actions mt-2">
+       <div class="newseperator">
+        <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block", id:"btnform" %>
+        </div>
+      </div>
+      <% end %>
+
+      <div class="separator my-3">Already have an account?</div>
+      <div class="newseperator">
+      <%= render "devise/shared/signin_btn" %>
+      </div>
+    </div>
+  </div>
+</div>
