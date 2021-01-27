@@ -1,0 +1,20 @@
+<div class="formceleb">
+      <%= simple_form_for @sport do |f| %>
+
+      <div class="form-inputs">
+        <%= f.label :title, class: 'text-white' %>
+        <%= f.input :title %>
+        <%= f.label :points, class: 'text-white' %>
+        <%= f.input :points %>
+        <%= f.label :photo, class: 'text-white' %>
+        <%= f.input :photo, as: :file %>
+        <%= f.label :description, class: 'text-white' %>
+        <%= f.text_field :description %>
+      </div>
+
+
+        <%= f.submit "Submit offer", class: "btn btn-primary btn-block" %>
+
+      <% end %>
+
+</div>

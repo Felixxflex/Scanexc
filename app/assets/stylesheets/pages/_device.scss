@@ -1,0 +1,62 @@
+.form-control {
+    display: flex;
+    width: 20rem;
+    margin: none;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    /* align-items: center; */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: -18rem;
+}
+
+.greenlogo {
+    vertical-align: middle;
+    border-style: none;
+    width: 20rem;
+    height: 20rem;
+}
+
+.nicelogo {
+    display: flex;
+    justify-content: center;
+}
+
+#btnform {
+    border-radius: 2rem;
+}
+
+.form-check-input {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.newcardtitlelogin {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-family: 'Fredoka One', cursive !important;
+}

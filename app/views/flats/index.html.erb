@@ -1,0 +1,62 @@
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link
+rel="stylesheet"
+href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+type="text/css"
+/>
+<div class="mapboss" >
+<div id='map'></div>
+<div>
+<script>
+mapboxgl.accessToken = '<%= ENV['MAPBOX_API_KEY'] %>';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [5.9829076, 49.8148347], // starting position
+zoom: 9 // starting zoom
+});
+var marker = new mapboxgl.Marker()
+.setLngLat([14.550343, 20.665957])
+.addTo(map);
+
+var marker = new mapboxgl.Marker()
+.setLngLat([14.550343, 55.665957])
+.addTo(map);
+
+// Add geolocate control to the map.
+map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
+map.addControl(
+new MapboxDirections({
+accessToken: mapboxgl.accessToken
+}),
+'top-left'
+);
+map.on('load', function () {
+    map.resize();
+});
+</script>
+
+
+    <div class="card-w ">
+    <div class="card20 neumorphism">
+    <div class="card__icon">
+   
+    </div>
+    <div class="card__text">
+      1. Locate yourself      <br>
+      2. Point your location and the nearest bin
+      <div class="newmapbtn">
+<a href="/"><button class="btnnn btn--alpha"><span>Go Back</span></button></a>
+</div>
+    </div>
+  </div>
+  </div>
+
+ 

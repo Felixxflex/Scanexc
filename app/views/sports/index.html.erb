@@ -1,0 +1,36 @@
+<div class="newback">
+<h1 class="newcardtitle">This Month :</h1>
+<div class="newoptions">
+<div class="multi-button">
+  <a href="/offers"><button>Offers</button></a>
+  <a href="/sneakers"><button>Sneakers</button></a>
+  <a href="/sports"><button>Sports</button></a>
+</div>
+</div>
+
+        <%@sports.each do |sport|%>
+            
+      
+         <section class="cards-wrapper">
+  <div class="card2-grid-space">
+    
+    <div class="card2" style="">
+    <div>
+   <%= cl_image_tag sport.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill%> 
+        <%= link_to sport_path(sport) do %> 
+        <h1><%= sport.title %></h1>
+        <p><%= sport.description%></p>
+        <%end%> 
+        
+        <div class="tags">
+          <div class="tag"><%=sport.points%>PTS</div>
+        </div>
+  </div>
+    </div>
+  </div>
+ </div> 
+    
+  
+</section>
+
+<%end%>
