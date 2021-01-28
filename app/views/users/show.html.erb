@@ -11,7 +11,7 @@
 	<div class="profile">
     <div class="centerprofile">
     <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, class: "rounded-circle" %>
+          <%= cl_image_tag current_user.photo.key, :cloud_name => 'dn6wh4u2h', class: "rounded-circle" %>
           <% elsif current_user.avatar_url? %>
           <%= image_tag current_user.avatar_url, class: "rounded-circle" %>
           <% else %>
