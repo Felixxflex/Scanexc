@@ -1,8 +1,14 @@
+// #map {
+//     height: 25rem;
+//     width: 24rem;
+//     border-radius: 0rem;
+//     margin-top: -15rem;
+// }
 #map {
-    height: 25rem;
-    width: 24rem;
-    border-radius: 0rem;
-    margin-top: -15rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .mapboss {
@@ -177,7 +183,7 @@ delta: ( gstart: #3EECAC, gend: #EE74E1, tstart: #EE74E1, tend: #3EECAC));
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 30rem;
 }
 
 .btnnn {
