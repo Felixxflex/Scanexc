@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_180448) do
+ActiveRecord::Schema.define(version: 2021_01_30_151156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,13 +45,13 @@ ActiveRecord::Schema.define(version: 2021_01_28_180448) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "offers", force: :cascade do |t|
+  create_table "gadgets", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.integer "points"
+    t.string "photo", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "photo", array: true
   end
 
   create_table "qr_codes", force: :cascade do |t|
@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(version: 2021_01_28_180448) do
   end
 
   create_table "sports", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "points"
+    t.string "photo", array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "technologies", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.integer "points"
