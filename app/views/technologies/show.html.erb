@@ -1,23 +1,24 @@
+
 <div class="backkgr">
 <div class='container-fluid1'>
     <div class="card22 mx-auto col-md-3 col-10 mt-5 pt-4">
         <div class="d-flex sale ">
             <div class="btn345">
             <div class="number34">
-            <%=@sport.points%>
+            <%=@technologie.points%>
             </div>
             </div>
-        </div> <%= cl_image_tag @sport.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
+        </div> <%= cl_image_tag @technologie.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
         <div class="card-body text-center mx-auto">
-            <h5 class="card-title"><%=@sport.title%></h5>
-            <p class="card-text"><%=@sport.description%></p>
+            <h5 class="card-title"><%=@technologie.title%></h5>
+            <p class="card-text"><%=@technologie.description%></p>
         </div>
     </div>
 </div>
 </div>
 
 
-<h2 class="newcardtitle44">Get your <%=@sport.title %></h2>
+<h2 class="newcardtitle44">Get your <%=@technologie.title %></h2>
 
 
 <div class="newcarddollar">

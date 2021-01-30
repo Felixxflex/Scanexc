@@ -1,28 +1,23 @@
-<section class="cards3-wrapper">
-  <div class="card2-grid-space">
-    
-    <a class="card3" style="--bg-img: url(https://res.cloudinary.com/dn6wh4u2h/image/upload/v1610199729/airpodstest_va9l24.jpg)">
-   
-      <div>
-        <%# <%= link_to offer_path(offer) do %>
-        <%# <%end%> 
-        <div class="date"></div>
-        <div class="tags">
-          <div class="tag"><%=@sneaker.points%>PTS</div>
+<div class="backkgr">
+<div class='container-fluid1'>
+    <div class="card22 mx-auto col-md-3 col-10 mt-5 pt-4">
+        <div class="d-flex sale ">
+            <div class="btn345">
+            <div class="number34">
+            <%=@sneaker.points%>
+            </div>
+            </div>
+        </div> <%= cl_image_tag @sneaker.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
+        <div class="card-body text-center mx-auto">
+            <h5 class="card-title"><%=@sneaker.title%></h5>
+            <p class="card-text"><%=@sneaker.description%></p>
         </div>
-      </div>
-    </a>
-  </div>
-  
-    
-  
-</section>
+    </div>
+</div>
+</div>
 
 
-<h1 class="newcardtitle2"><%=@sneaker.title %></h1>
-<p class="newcardtitle3"><%=@sneaker.description%></p>
-
-<h2 class="newcardtitle4"><%=@sneaker.title %></h2>
+<h2 class="newcardtitle44">Get your <%=@sneaker.title %></h2>
 
 
 <div class="newcarddollar">
