@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
     def show
  
     end
@@ -22,7 +23,10 @@ class UsersController < ApplicationController
     def update
      
     end
-    
+    def addpoints
+        
+    end
+
     def update
       @user.update(user_params)
       redirect_to user_path(@sports)
@@ -37,7 +41,8 @@ class UsersController < ApplicationController
     end
   
     def user_params
-      params.require(:user).permit(:username, :email, :full_name, :photo, :login)
+      params.require(:user).permit(:username, :email, :full_name, :photo, :login, :winpoints)
     end
+    
     
   end
