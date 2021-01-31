@@ -6,6 +6,17 @@ class User < ApplicationRecord
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable,
            :registerable, :confirmable
+
+        
+        
+        validates :winpoints, presence: true
+        validates :username, presence: true
+        validates :full_name, presence: true
+        validates :plz, presence: true
+        validates :street_name, presence: true
+        validates :house_number, presence: true
+        validates :city, presence: true
+        
   
            def self.from_omniauth(auth)
             where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
