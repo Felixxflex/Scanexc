@@ -1,7 +1,7 @@
 class SportsController < ApplicationController
     skip_before_action :authenticate_user!, :raise => false
     before_action :set_sport, only: [:show]
-    http_basic_authenticate_with :name => 'FelixxFel', :password => 'Jordanshacker1710.shivflex.2020', only: :new
+    http_basic_authenticate_with :name => ENV['NEW_USERNAME'], :password => ENV['NEW_PASSWORD'], only: :new
   
 
     def index
