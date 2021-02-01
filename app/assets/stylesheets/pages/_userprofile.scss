@@ -15,7 +15,7 @@
 
 // ------------------------------------------------
 $purple-gradient: linear-gradient(45deg, rgba(87, 29, 146, 1) 0%, rgba(172, 25, 102, 1) 100%);
-$purple-gradient: linear-gradient(to bottom right, #80ed99, #c7f9cc);
+$purple-gradient: linear-gradient(to bottom right, #7bf1a8, #7bf1a8);
 $blue1-gradient: linear-gradient(to bottom right, #5E5AEC, #3F9EFC);
 $blue2-gradient: linear-gradient(to bottom right, #6452E9, #639FF9);
 $shadow: 0 13px 26px rgba(#000, .2),
@@ -95,7 +95,7 @@ $shadow: 0 13px 26px rgba(#000, .2),
 .wrapper2 {
     width: 320px;
     height: 560px;
-    margin-top: -10rem;
+    margin-top: -7rem;
     background: #FDFEFF;
     transition: background .6s ease;
     border-radius: 10px;
