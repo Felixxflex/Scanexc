@@ -44,6 +44,13 @@ accessToken: mapboxgl.accessToken
 map.on('load', function () {
     map.resize();
 });
+
+if (navigator.geolocation) { // device can return its location
+    navigator.geolocation.getCurrentPosition(function(position) {
+         console.log(position.coords.latitude);
+         console.log(position.coords.longitude);
+    });
+}
 map.addControl(new mapboxgl.FullscreenControl());
 
 </script>
