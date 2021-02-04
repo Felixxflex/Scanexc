@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+ 
 
     def show
  
@@ -20,9 +20,7 @@ class UsersController < ApplicationController
     def edit
     end
     
-    def update
-     
-    end
+    
     def addpoints
         
     end

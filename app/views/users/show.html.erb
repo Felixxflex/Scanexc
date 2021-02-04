@@ -21,9 +21,15 @@
 		<h4 class="name"><%= current_user.username %></h4>
 		<p class="title"><%= current_user.full_name %></p>
 		<h1 class="description"><%= current_user.winpoints %> PTS</h1>
-		<a href="/sports"><button type="button" class="btn345">Go Shop</button></a>
+		<a href="/sports"><button type="button" class="btn345">
+		<%= link_to edit_user_registration_path, class: "" do %>
+		Edit Profile
+		<% end %>
+		</button></a>
+		
 	</div>
 	<div class="social-icons">
+	
 		<div class="icon">
 			<h4 class="newh4">Delivery Info : <br>
             <%= current_user.city %> <br>
@@ -43,5 +49,10 @@
 		</div>
 	</div>
 	
+</div>
+<div class="newggo">
+<button type="button" class="btn348">
+		<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+</button>
 </div>
 </div>

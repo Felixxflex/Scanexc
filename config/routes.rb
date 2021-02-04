@@ -18,6 +18,5 @@ Rails.application.routes.draw do
   get "/path/users/show", to: "users#show", as: "usersshow"
   
 
-  get "/path/users/addpoints", to: "users#addpoints"
-  patch "/path/users/:id", to: "users#add_points"
+  get "/path/users/addpoints", to: "winpoints#update", as: :user_add_points
 end
