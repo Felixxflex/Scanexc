@@ -98,7 +98,7 @@ $shadow: 0 13px 26px rgba(#000, .2),
     margin-top: -7rem;
     background: #FDFEFF;
     transition: background .6s ease;
-    border-radius: 10px;
+    border-radius: 56px;
     padding: 20px 20px 20px 20px;
     box-shadow: 0 8px 40px rgba(#000000, .2);
     .top-icons {
@@ -190,7 +190,6 @@ $shadow: 0 13px 26px rgba(#000, .2),
             margin-left: auto;
             margin-right: auto;
             border-radius: 70px;
-            box-shadow: 0 13px 26px rgba(#000, .16), 0 3px 6px rgba(#000, .16);
             background: $purple-gradient;
         }
     }
@@ -249,7 +248,7 @@ $shadow: 0 13px 26px rgba(#000, .2),
 
 .rounded-circle {
     border-radius: 50% !important;
-    height: 8rem !important;
+    height: 9rem !important;
     width: 9rem !important;
 }
 
@@ -281,4 +280,30 @@ $shadow: 0 13px 26px rgba(#000, .2),
 
 .newcardtitle {
     margin-top: -0.5rem;
+}
+
+//edit
+.edit_user {
+    display: table-caption;
+}
+
+.newggo {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.btn348 {
+    color: #fff;
+    width: 130px;
+    height: 42px;
+    outline: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 70px;
+    background: linear-gradient(to bottom right, #7bf1a8, #7bf1a8)
 }
