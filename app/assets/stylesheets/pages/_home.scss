@@ -1,7 +1,9 @@
 $color1: rgba(107, 250, 95, 1);
 $color2: rgba(36, 129, 215, 0.9);
 body {
-    background-color: #bbdef0;
+    // background-color: #bbdef0;
+    background-color: #758bfd;
+    // background-color: #02134F;
 }
 
 * {
@@ -462,4 +464,8 @@ a {
 //prices
 .newback {
     margin-top: -14rem;
+}
+
+svg {
+    color: #f7f7ff;
 }
