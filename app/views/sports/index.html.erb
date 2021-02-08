@@ -15,31 +15,28 @@
 </div>
 </div>
 </div>
-        <%@sports.each do |sport|%>
-            
-      
-         <section class="cards-wrapper">
-  <div class="card2-grid-space">
-    
-    <div class="card2" style="">
-    <div>
-   <%= cl_image_tag sport.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill%> 
-        <%= link_to sport_path(sport) do %> 
-        <h1><%= sport.title %></h1>
-        <p><%= sport.description%></p>
-        <%end%> 
-        
-        <div class="tags">
-          <div class="tag"><%=sport.points%>PTS</div>
-        </div>
-  </div>
-    </div>
-  </div>
- </div> 
-    
-  
-</section>
 
+
+<%@sports.each do |sport|%>
+<div class="backkgr">
+<div class='container-fluid'>
+    <div class="card22 mx-auto col-md-3 col-10 mt-5 pt-4">
+        <div class="d-flex sale ">
+            <div class="btn345">
+            <div class="number34">
+            <%=sport.winpoints%>
+            </div>
+            </div>
+        </div> <%= cl_image_tag sport.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
+        <div class="card-body text-center mx-auto">
+        <%= link_to sport_path(sport) do %> 
+            <h5 class="card-title"><%=sport.title%></h5>
+            <p class="card-text"><%=sport.description%></p>
+             <%end%>
+        </div>
+    </div>
+</div>
+</div>
 <%end%>
 
 <script>
