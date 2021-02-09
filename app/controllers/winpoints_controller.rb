@@ -21,7 +21,7 @@ class WinpointsController < ApplicationController
   def update
     @user.winpoints += 10
     if @user.save
-      redirect_to usersshow_path(@user), notice: 'Points Updated.'
+      redirect_to usersshow_path(@user)
     else
       render :edit
     end
