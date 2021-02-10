@@ -1,16 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="device-wrapper">
+  <div class="device-container forgot_pw">
+<h2 class="newcardtitle187">Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="form-inputs3">
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+  <div class="form-actions3 mb-2">
+    <%= f.button :submit, "Send me reset password instructions", class: "btn btn-warning btn-block" %>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%# <%= render "devise/shared/forgot_pw_page" %> 
+</div>
+</div>
