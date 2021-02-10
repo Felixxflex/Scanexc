@@ -45,7 +45,18 @@
           <%# <% end %> 
 		  </div>
     </div>
-  </div>
+
   
 </div>
+</div>
+  </div>
+  <%# <div class="newggo">
+<button type="button" class="btn348">
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<%# </button>
+</div>  %>
+<div class="editshow">
+<%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
+Edit Profile
+<%end%>
 </div>

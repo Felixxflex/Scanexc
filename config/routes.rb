@@ -18,10 +18,12 @@ Rails.application.routes.draw do
   get "/path/share", to: "pages#share", as: "pagesshare"
   get "/path/questions", to: "pages#questions", as: "pagesquestions"
   get "/path/users/show", to: "users#show", as: "usersshow"
+  resources :users, only: [:show, :edit, :update]
+
 
   
 
-  # get "/path/users/removepoints", to: "sports#update", as: :sport_remove_points
+  # get "/path/users/removepoints", to: "winpoints#update_points", as: :user_remove_points
 
 
   get "/path/users/addpoints", to: "winpoints#update", as: :user_add_points
