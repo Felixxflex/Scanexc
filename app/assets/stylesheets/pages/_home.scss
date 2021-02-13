@@ -5,7 +5,9 @@ body {
     // background-color: #bbdef0;
     // background-color: #758bfd;
     // background-color: #02134F;
-    background-color: rgb(27, 26, 26);
+    // background-color: rgb(27, 26, 26);
+    background-image: url('https://res.cloudinary.com/dn6wh4u2h/image/upload/v1613229941/backgroundfinal_wxdldu.png');
+    background-size: cover;
 }
 
 * {
@@ -898,4 +900,5 @@ svg {
 #locoicon {
     width: 6rem;
     height: 4rem;
+    color: #7BF1A8;
 }
