@@ -4,8 +4,8 @@ $color2: rgba(36, 129, 215, 0.9);
 body {
     // background-color: #bbdef0;
     // background-color: #758bfd;
-    // background-color: #02134F;
-    background-color: rgb(27, 26, 26);
+    background-color: #89FFC3;
+    // background-color: rgb(27, 26, 26);
 }
 
 * {
@@ -508,15 +508,15 @@ svg {
     height: 36px;
     width: 36px;
     top: 0;
-    color: #c644fc;
-    background-color: #000;
+    color: white;
+    background-color: #c644fc;
     font-size: 12px;
     font-weight: 400;
     line-height: 32px;
     text-align: center;
     border: 2px solid #c644fc;
     border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 0px #c644fc;
+    box-shadow: inset 0px 0px 0px 0px #7BF1A8;
     transform: scale(0.75);
     transition: all 0.5s ease;
 }
@@ -818,7 +818,7 @@ svg {
 .navigation-circle-list-item:active .navigation-circle-list-item__point:before,
 .navigation-circle-list-item.active .navigation-circle-list-item__point:before {
     transform: scale(0.85);
-    color: #1f1f21;
+    color: #7BF1A8;
     box-shadow: inset 0px 0px 0px 16px #c644fc;
     border-color: transparent;
 }
@@ -837,9 +837,9 @@ svg {
 
 .navigation-circle-list-item.active .navigation-circle-list-item__meta1 {
     opacity: 1;
-    left: -19rem;
-    right: -5rem;
-    top: 3.5rem;
+    left: -18.5rem;
+    right: -4rem;
+    top: 2.5rem;
 }
 
 .navigation-circle-list-item.active .navigation-circle-list-item__meta2 {
@@ -851,9 +851,10 @@ svg {
 
 .navigation-circle-list-item.active .navigation-circle-list-item__meta3 {
     opacity: 1;
-    left: -16.5rem;
-    right: 4rem;
-    top: -2.5rem;
+    left: -20rem;
+    right: -5rem;
+    top: -9rem;
+    bottom: 4rem;
 }
 
 .navigation-circle-list-item.active .navigation-circle-list-item__meta4 {
@@ -907,9 +908,70 @@ svg {
 #locoicon {
     width: 6rem;
     height: 4rem;
-    color: #7BF1A8;
+    color: white;
 }
 
 img {
     opacity: 0.5;
+}
+
+//new home
+.locogp {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.locogp .newgogp {
+    list-style: none;
+    margin: 0 15px;
+    margin-bottom: 3rem;
+}
+
+.locogp .newgogp a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: #7BF1A8;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+}
+
+.locogp .newgogp a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #7BF1A8;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.locogp .newgogp a:hover:before {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #7BF1A8;
+    filter: blur(3px);
+}
+
+.locogp .newgogp a:hover {
+    color: #9DFFCD;
+    box-shadow: 0 0 15px #7BF1A8;
+    text-shadow: 0 0 15px #7BF1A8;
+}
+
+.backkgr {
+    margin-top: 10rem;
 }
