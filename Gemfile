@@ -19,6 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'geocoder'
+
 gem 'mini_magick'
 gem 'mapbox-gl-rails'
 gem 'social-share-button'

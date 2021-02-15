@@ -8,7 +8,6 @@ class WinpointsController < ApplicationController
   
   # def update_points
   #   @sport = Sport.find(params[:id])
-  #   @user = current_user
   #   if @user.winpoints == @sport.winpoints
   #     return @user.winpoints -= @sport.winpoints
   #   elsif @user.winpoints >= @sport.winpoints 

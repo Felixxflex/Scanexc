@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
   
   def edit
+   
   end
   
   
@@ -25,10 +26,15 @@ class UsersController < ApplicationController
       
   end
 
+    def removepoints
+
+    end
  
   def update
+    @user = User.find(params[:id])
     @user.update(user_params)
-    redirect_to user_path(@sports)
+
+    redirect_to usersshow_path(@user)
   end
   
   
