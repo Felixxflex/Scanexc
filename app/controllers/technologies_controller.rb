@@ -2,30 +2,44 @@ class TechnologiesController < ApplicationController
     skip_before_action :authenticate_user!, :raise => false
     before_action :set_technologie, only: [:show]
     http_basic_authenticate_with :name => 'FelixxFel', :password => 'Jordanshacker1710.shivflex.2020', only: :new
-  
-    
+
+
     def index
-        @technologies = Technologie.all 
+        @technologies = Technologie.all
     end
 
-  
-    
-    def show
-      
-        
-        
+    def update_points
+    @technologie = Technologie.find(params[:id])
+    @user = current_user
+    if @user.winpoints == @technologie.points || @user.winpoints >= @technologie.points
+      @user.winpoints -= @technologie.points
+      if @user.save
+        redirect_to usersshow_path(@user)
+      else
+        render :edit
+      end
+    else
+      redirect_to usersshow_path(@user), notice: 'Scan more bro'
     end
-  
+  end
+
+
+    def show
+
+
+
+    end
+
     def new
       @technologie = Technologie.new()
     end
-  
-    
-    
+
+
+
     def create
-    
+
     @technologies = Technologie.new(technologie_params)
-      
+
       if @technologies.save
         redirect_to technologies_path(@technologie)
       else
@@ -51,7 +65,7 @@ end
 private
 
 def set_technologie
-@technologie = Technologie.find(params[:id])   
+@technologie = Technologie.find(params[:id])
 end
 
 def technologie_params
