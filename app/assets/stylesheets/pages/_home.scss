@@ -3,6 +3,10 @@
     font-family: 'Fredoka One', cursive;
 }
 
+body {
+    background-color: #89FFC3;
+}
+
 *,
 *:before,
 *:after {
@@ -14,14 +18,18 @@
     transition: all 0 0 !important;
 }
 
-.scene {
-    overflow: hidden;
-}
-
+// html,
+// body {
+//     height: 100%;
+//     background: #89FFC3;
+//     overflow-x: hidden;
+//     overflow-y: auto;
+// }
 html,
-body {
+.neww {
     height: 100%;
     background: #89FFC3;
+    overflow: hidden;
 }
 
 @media (max-width: 960px) {
