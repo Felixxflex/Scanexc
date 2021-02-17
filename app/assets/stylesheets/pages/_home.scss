@@ -14,10 +14,13 @@
     transition: all 0 0 !important;
 }
 
+.scene {
+    overflow: hidden;
+}
+
 html,
 body {
     height: 100%;
-    overflow: hidden;
     background: #89FFC3;
 }
 
