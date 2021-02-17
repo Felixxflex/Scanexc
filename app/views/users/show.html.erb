@@ -1,30 +1,22 @@
 <div class="main22">
-  <div class="navigation-circle22">
-    <div class="navigation-circle__inner22">
+  <div class="navigation-circle">
+    <div class="navigation-circle__inner">
       <svg class="navigation-circle-svg navigation-circle-svg--opaque" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 320 320" style="enable-background:new 0 0 320 320">
         <circle cx="160" cy="160" r="158" fill="none" stroke-width="1" stroke="#c644fc" stroke-linecap="round" stroke-miterlimit="10" style="stroke-dashoffset:0;stroke-dasharray:none;"></circle>
       </svg>
       <svg class="navigation-circle-svg navigation-circle-svg--mask" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 320 320" style="enable-background:new 0 0 320 320">
         <circle id="mask-circle" cx="160" cy="160" r="158" fill="none" stroke-width="2" stroke="#c644fc" stroke-linecap="round" stroke-miterlimit="10" style="stroke-dasharray:1005.3088px;"></circle>
       </svg>
-      <ul class="navigation-circle__list22">
       <div class="newh1"> 
  <h1 class="newh1circle"><%= current_user.winpoints %></h1>
  </div> 
+      <ul class="navigation-circle__list">
       </ul>
     </div>
   </div>
 </div>
 
-<div>
-  <div class="container8976">
-    <ul class="locogp">
- 
-      <li class="newgogp"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-     
-    </ul>
-  </div>
-</div>
+
 <%# <div class="orb">
 <div class="newh1"> %>
  
@@ -38,7 +30,7 @@
     <div class="card__front-logo card__logo">
 	
 </div>
-    <p class="card_numer">**** **** **** <%= current_user.plz %></p>
+<p class="card_numer">**** **** **** <%= current_user.plz %></p>
     <div class="card__space-75">
       <span class="card__label"><%= current_user.full_name %></span>
       <p class="card__info"><%= current_user.username %></p>
@@ -76,8 +68,7 @@
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 <%# </button>
 </div>  %>
-<div class="editshow">
-<%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
+<div class="editshow"><%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
 Edit Profile
 <%end%>
 </div>
