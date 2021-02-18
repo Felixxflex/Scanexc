@@ -18,16 +18,22 @@ body {
     transition: all 0 0 !important;
 }
 
+// html,
+// .neww {
+//     height: 100%;
+//     background: #89FFC3;
+//     overflow: hidden;
+//     margin: 0;
+//     width: 100%;
+// }
 html,
-.neww {
+body {
     height: 100%;
-    background: #89FFC3;
-    overflow: hidden !important;
+    overflow: auto;
     margin: 0;
     width: 100%;
 }
 
-// 
 // html,
 // body {
 //     height: 100%;
