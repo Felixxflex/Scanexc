@@ -31,7 +31,6 @@ $white: #fafafa;
 
 .newquestions {
     color: $black;
-    font-family: 'Raleway', sans-serif;
 }
 
 main {
@@ -39,6 +38,7 @@ main {
     margin: 0 auto;
     max-width: 40rem;
     padding: 1rem;
+    font-size: 1.5rem;
 }
 
 ol.gradient-list {
@@ -55,6 +55,7 @@ ol.gradient-list {
         min-height: 3rem;
         padding: 1rem 1rem 1rem 3rem;
         position: relative;
+        font-family: 'Fredoka One', cursive !important;
         &::before,
         &::after {
             background: linear-gradient(135deg, $blue 0%, $green 100%);
