@@ -8,7 +8,20 @@ class TechnologiesController < ApplicationController
         @technologies = Technologie.all 
     end
 
-  
+    def update_points
+      @technologie = Technologie.find(params[:id])
+      @user = current_user
+      if @user.winpoints == @technologie.points || @user.winpoints >= @technologie.points
+        @user.winpoints -= @technologie.points
+        if @user.save
+          redirect_to usersshow_path(@user)
+        else
+          render :edit
+        end
+      else
+        redirect_to usersshow_path(@user), notice: 'You have to scan more my Bre'
+      end
+    end
     
     def show
       
