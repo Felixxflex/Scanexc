@@ -26,7 +26,7 @@
     
     <div class="card2" style="">
     <div>
-   <%= cl_image_tag sneaker.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill%> 
+   <%= cl_image_tag sneaker.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, class: 'imglo'%> 
         <%= link_to sneaker_path(sneaker) do %> 
         <h1><%= sneaker.title %></h1>
         <p><%= sneaker.description%></p>

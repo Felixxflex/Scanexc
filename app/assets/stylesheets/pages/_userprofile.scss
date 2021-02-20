@@ -9,6 +9,8 @@
     cursor: pointer;
     font-weight: 300;
     margin-left: auto;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
     margin-right: auto;
     border-radius: 70px;
     background: linear-gradient(to bottom right, #7bf1a8, #7bf1a8)
@@ -37,7 +39,7 @@
     -webkit-justify-content: center;
     flex-direction: column;
     -webkit-flex-direction: column;
-    margin-top: 48%;
+    margin-top: 60%;
     margin-bottom: 5rem;
 }
 
@@ -279,5 +281,5 @@ $start_anim_delta: 5;
 
 //show checkout
 .backkgr {
-    margin-top: 31rem;
+    margin-top: 6rem;
 }
