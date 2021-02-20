@@ -47,7 +47,7 @@
       <div class="card__secret">
         <p class="card__secret--last"><%= current_user.winpoints %></p>
       </div>
-      <img class="card__back-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
+      <img class="card__back-square card__square" src="">
       <div class="card__back-logo card__logo">
       <%# <% if current_user.photo.attached? %> 
           <%# <%= cl_image_tag current_user.photo.key, :cloud_name => 'dn6wh4u2h', class: "rounded-circle" %> 
@@ -68,8 +68,8 @@
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 <%# </button>
 </div>  %>
-<div class="editshow"><%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
-Edit Profile
+<div class="btn348"><%= link_to edit_user_registration_path do %>
+Edit 
 <%end%>
 </div>
   <div class="newggo">
