@@ -6,16 +6,20 @@ class WinpointsController < ApplicationController
     params.permit(:username, :email, :full_name, :photo, :winpoints)
   end
   
-  # def update_points
-  #   @sport = Sport.find(params[:id])
-  #   if @user.winpoints == @sport.winpoints
-  #     return @user.winpoints -= @sport.winpoints
-  #   elsif @user.winpoints >= @sport.winpoints 
-  #     return @user.winpoints -= @sport.winpoints
-  #   else
-  #     return redirect_to usersshow_path(@user), notice: 'Scan more bro'
-  #   end 
-  # end
+  def update_points
+    @sport = Sport.find(params[:id])
+    @user = current_user
+    if @user.winpoints == @sport.winpoints || @user.winpoints >= @sport.winpoints
+      @user.winpoints -= @sport.winpoints
+      if @user.save
+        redirect_to usersshow_path(@user)
+      else
+        render :edit
+      end
+    else
+      redirect_to usersshow_path(@user), notice: 'Scan more bro'
+    end
+  end
   
   def update
     @user.winpoints += 10

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   
 
   # get "/path/users/removepoints", to: "winpoints#update_points", as: :user_remove_points
-
+  get "/path/users/remove_points", to: "technologies#update_points", as: :sport_remove_points
 
   get "/path/users/addpoints", to: "winpoints#update", as: :user_add_points
 end
