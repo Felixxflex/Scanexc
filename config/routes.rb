@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
 
 
-  
+  get "/path/users/newpoints", to: "users#newpoints", as: "usersnewpoints"
+
 
   # get "/path/users/removepoints", to: "winpoints#update_points", as: :user_remove_points
   get "/path/users/remove_points", to: "technologies#update_points", as: :sport_remove_points
