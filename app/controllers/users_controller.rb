@@ -21,7 +21,9 @@ class UsersController < ApplicationController
    
   end
   
-  
+  def newpoints
+    
+  end
   def addpoints
       
   end
