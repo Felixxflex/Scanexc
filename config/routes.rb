@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get "/path/users/show", to: "users#show", as: "usersshow"
   resources :users, only: [:show, :edit, :update]
 
+  get "/path/businesses/business", to: "businesses#business"
 
   get "/path/users/newpoints", to: "users#newpoints", as: "usersnewpoints"
 
