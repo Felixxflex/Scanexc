@@ -14,13 +14,13 @@
 
 <script>
 // Options
-const particleCount = 6000;
+const particleCount = 9000;
 		
-const particleSize = .3;
+const particleSize = .4;
 
-const defaultAnimationSpeed = 1,
+const defaultAnimationSpeed = 0.8,
 		morphAnimationSpeed = 18,
-	  	color = '#FFFFFF';
+	  	color = '#7BF1A8';
 
 // Triggers
 const triggers = document.getElementsByTagName('span')
@@ -45,10 +45,10 @@ window.addEventListener('resize', fullScreen, false)
 var scene = new THREE.Scene();
 
 // Camera and position
-var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+var camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 1, 10000 );
 
-camera.position.y = -45;
-camera.position.z = 45;
+camera.position.y = -100;
+camera.position.z = -100;
 
 // Lighting
 var light = new THREE.AmbientLight( 0xFFFFFF, 1 );
@@ -79,7 +79,7 @@ loader.load( typeface, ( font ) => {
 		texts[idx].geometry = new THREE.TextGeometry( trigger.textContent, {
 			font: font,
 			size: window.innerWidth * 0.02,
-			height: 4,
+			height: 2.5,
 			curveSegments: 10,
 		});
 		
@@ -149,7 +149,7 @@ const normalSpeed = (defaultAnimationSpeed/100),
 let animationVars = {
 	speed: normalSpeed,
 	color: color,
-	rotation: -45
+	rotation: -100
 }
 
 
@@ -158,7 +158,7 @@ function animate() {
 	particleSystem.rotation.y += animationVars.speed;
 	particles.verticesNeedUpdate = true; 
 	
-	camera.position.z = animationVars.rotation;
+	
 	camera.position.y = animationVars.rotation;
 	camera.lookAt( scene.position );
 	
@@ -170,7 +170,7 @@ function animate() {
 
 animate();
 
-function morphTo (newParticles, color = '#FFFFFF') {
+function morphTo (newParticles, color = '#7BF1A8') {
 	
 	TweenMax.to(animationVars, .1, {
 		ease: Power4.easeIn, 
