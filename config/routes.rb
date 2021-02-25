@@ -26,6 +26,9 @@ Rails.application.routes.draw do
 
   get "/path/businesses/business", to: "businesses#business"
 
+  get "/path/wins/windirection", to: "wins#windirection"
+
+
   get "/path/users/newpoints", to: "users#newpoints", as: "usersnewpoints"
 
 
