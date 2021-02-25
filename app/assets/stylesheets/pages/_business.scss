@@ -80,7 +80,7 @@ $animationSpeed: 40s;
     vertical-align: middle;
 }
 
-input,
+.newhola,
 .searchbtn {
     color: #fff;
     font-family: Nunito;
@@ -108,14 +108,14 @@ form {
     height: 96px;
 }
 
-input[type="text"] {
+.newhola[type="text"] {
     width: 100%;
     height: 96px;
     font-size: 45px;
     line-height: 1;
 }
 
-input[type="text"]::placeholder {
+.newhola[type="text"]::placeholder {
     color: #f2fcff;
     font-family: 'Fredoka One', cursive !important;
 }
