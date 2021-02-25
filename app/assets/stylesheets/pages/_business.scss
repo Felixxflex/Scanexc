@@ -81,7 +81,7 @@ $animationSpeed: 40s;
 }
 
 input,
-button {
+.searchbtn {
     color: #fff;
     font-family: Nunito;
     padding: 0;
@@ -125,7 +125,7 @@ input[type="text"]::placeholder {
     padding-left: 35px;
 }
 
-button {
+.searchbtn {
     position: relative;
     display: block;
     width: 84px;
@@ -147,7 +147,7 @@ button {
     transition: 0.5s ease all;
 }
 
-button span {
+.searchbtn span {
     position: absolute;
     top: 68px;
     left: 43px;
@@ -160,8 +160,8 @@ button span {
     transition: 0.5s ease all;
 }
 
-button span:before,
-button span:after {
+.searchbtn span:before,
+.searchbtn span:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -368,4 +368,16 @@ button span:after {
 
 #smallchange {
     top: -7rem;
+}
+
+.h1div {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive !important;
+    margin-top: -14rem;
+}
+
+.h1buiz {
+    font-size: 5.5rem;
 }
