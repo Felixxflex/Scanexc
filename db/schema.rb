@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_131750) do
+ActiveRecord::Schema.define(version: 2021_02_26_094446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,11 +45,12 @@ ActiveRecord::Schema.define(version: 2021_02_25_131750) do
     t.string "business_website"
     t.integer "business_number"
     t.string "business_card"
-    t.string "total_scans"
     t.string "business_image", array: true
     t.string "business_opening"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "business_title"
+    t.integer "total_scans"
   end
 
   create_table "flats", force: :cascade do |t|
@@ -79,11 +80,12 @@ ActiveRecord::Schema.define(version: 2021_02_25_131750) do
     t.string "business_website"
     t.integer "business_number"
     t.string "business_card"
-    t.string "total_scans"
     t.string "business_image", array: true
     t.string "business_opening"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "business_title"
+    t.integer "total_scans"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -97,11 +99,12 @@ ActiveRecord::Schema.define(version: 2021_02_25_131750) do
     t.string "business_website"
     t.integer "business_number"
     t.string "business_card"
-    t.string "total_scans"
     t.string "business_image", array: true
     t.string "business_opening"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "business_title"
+    t.integer "total_scans"
   end
 
   create_table "sneakers", force: :cascade do |t|
@@ -131,11 +134,12 @@ ActiveRecord::Schema.define(version: 2021_02_25_131750) do
     t.string "business_website"
     t.integer "business_number"
     t.string "business_card"
-    t.string "total_scans"
     t.string "business_image", array: true
     t.string "business_opening"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "business_title"
+    t.integer "total_scans"
   end
 
   create_table "technologies", force: :cascade do |t|

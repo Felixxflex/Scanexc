@@ -1,13 +1,44 @@
 class LocalsController < ApplicationController
     def index
-
+        @locals = Local.all
     end
-    def new
+  
 
-    end
+     
     def show
-        
+      
     end
+  
+    def new
+      @local = Local.new()
+    end
+  
+    
+    
+    def create
+    
+    @local = Local.new(store_params)
+      
+      if @local.save
+        redirect_to local_path(@local)
+      else
+        render :new
+    end
+  end
+  
+  def destroy
+  @local.destroy
+  redirect_to local_path
+  end
+  
+  
+  
+  def edit
+  end
+  
+  def update
+    
+  end
     private
 
 def set_gadget

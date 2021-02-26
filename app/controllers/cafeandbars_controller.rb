@@ -1,13 +1,44 @@
 class CafeandbarsController < ApplicationController
     def index
-
+        @cafeandbars = Cafeandbar.all
     end
-    def new
+  
 
-    end
+     
     def show
-
+      
     end
+  
+    def new
+      @cafeandbar = Cafeandbar.new()
+    end
+  
+    
+    
+    def create
+    
+    @cafeandbar = Cafeandbar.new(store_params)
+      
+      if @cafeandbar.save
+        redirect_to cafeandbar_path(@cafeandbar)
+      else
+        render :new
+    end
+  end
+  
+  def destroy
+  @cafeandbar.destroy
+  redirect_to cafeandbar_path
+  end
+  
+  
+  
+  def edit
+  end
+  
+  def update
+    
+  end
     private
 
 def set_gadget
