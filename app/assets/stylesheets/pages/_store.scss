@@ -13,7 +13,7 @@
     fill: currentColor;
 }
 
-.wrapper {
+.wrapper67 {
     width: 100%;
     width: 100%;
     height: auto;
@@ -21,9 +21,8 @@
     padding: 50px 20px;
     padding-top: 100px;
     display: flex;
-    background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
     display: flex;
-    background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
+    margin-top: -4rem;
     @media screen and (max-width: 768px) {
         height: auto;
         min-height: 100vh;
@@ -445,4 +444,31 @@ a:link {
 
 .mg-text {
     line-height: 14px
+}
+
+.card23 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0px;
+    width: 40.5rem;
+    margin-bottom: -7rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.cooltitle {
+    font-size: 3rem;
+    font-family: 'Fredoka One', cursive !important;
+}
+
+.text-black-50 {
+    font-size: 17px;
+}
+
+.descriptionh6 {
+    font-size: 2.5rem;
 }
