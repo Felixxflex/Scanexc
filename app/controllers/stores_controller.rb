@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+    before_action :set_store, only: [:show]
     def index
         @stores = Store.all
     end
@@ -41,11 +42,11 @@ class StoresController < ApplicationController
   end
     private
 
-    def set_gadget
-    @store = Gadget.find(params[:id])   
+    def set_store
+    @store = Store.find(params[:id])   
     end
     
-    def gadget_params
+    def store_params
     params.require(:store).permit(:business_address, :business_title, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening)
     end
 end
