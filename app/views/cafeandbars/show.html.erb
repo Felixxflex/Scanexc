@@ -1,47 +1,49 @@
 <html style='background-color: #5adbff !important'>
 <body style='background-color: #5adbff !important'>
+
 <div class="wrapper67">
 
   
   <div class="profile-card js-profile-card">
     <div class="profile-card__img">
-      <img class="newbuizcard" src="https://i.imgur.com/ccMhxvC.png" alt="profile card">
+      <img class="newbuizcard" src="" alt="profile card">
     </div>
 
     <div class="profile-card__cnt js-profile-cnt">
-      <div class="profile-card__name">Muhammed Erdem</div>
-      <div class="profile-card__txt">Front-end Developer from <strong>Mesopotamia</strong></div>
+      <div class="profile-card__name"><%=@cafeandbars.business_title%></div>
+      <div class="profile-card__txt"><%=@cafeandbars.business_description%></div>
       <div class="profile-card-loc">
         <span class="profile-card-loc__icon">
           <svg class="icon"><use xlink:href="#icon-location"></use></svg>
         </span>
 
         <span class="profile-card-loc__txt">
-          Istanbul, Turkey
+          <%=@cafeandbars.business_address%>
         </span>
       </div>
 
       <div class="profile-card-inf">
         <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">1598</div>
-          <div class="profile-card-inf__txt">Followers</div>
+          <div class="profile-card-inf__title"><%=@cafeandbars.business_stores%></div>
+          <div class="profile-card-inf__txt">Stores</div>
         </div>
 
         <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">65</div>
-          <div class="profile-card-inf__txt">Following</div>
+          <div class="profile-card-inf__title"><%=@cafeandbars.total_scans%></div>
+          <div class="profile-card-inf__txt">Scans</div>
         </div>
 
         <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">123</div>
-          <div class="profile-card-inf__txt">Articles</div>
+          <div class="profile-card-inf__title"><%=@cafeandbars.business_opening%></div>
+          <div class="profile-card-inf__txt">Openings</div>
         </div>
 
         <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">85</div>
-          <div class="profile-card-inf__txt">Works</div>
+          <div class="profile-card-inf__title"><%=@cafeandbars.business_rating%></div>
+          <div class="profile-card-inf__txt">Rating</div>
         </div>
       </div>
+
 
       <div class="profile-card-social">
         <a class="newbuizcard2" href="https://www.facebook.com/iaMuhammedErdem" class="profile-card-social__item facebook" target="_blank">
@@ -89,8 +91,8 @@
       </div>
 
       <div class="profile-card-ctr">
-        <button class="profile-card__button button--blue js-message-btn">Message</button>
-        <button class="profile-card__button button--orange">Follow</button>
+        <button class="profile-card__button button--blue js-message-btn">Website</button>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=<%=@cafeandbars.business_address%>"><button class="profile-card__button button--blue js-message-btn">Get the Way</button></a>
       </div>
     </div>
 
