@@ -232,6 +232,41 @@ a {
     vertical-align: -0.125em;
 }
 
+.profile-card-inf__txt {
+    font-weight: 500;
+    margin-top: 7px;
+    font-size: 2rem;
+}
+
+.profile-card-social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 3rem;
+}
+
+.profile-card__name {
+    font-weight: 700;
+    font-size: 30px !important;
+    margin-bottom: 15px;
+    color: black !important;
+}
+
+.profile-card__img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0px 5px 50px 0px #5adbff, 0px 0px 0px 7px #369db9 !important;
+}
+
 //table
 table {
     width: 100%;
