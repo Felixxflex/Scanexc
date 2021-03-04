@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     # Create the user from params
     @user = User.new(user_params)
     if @user.save
-      # Deliver the signup email
+      Deliver the signup email
       UserNotifierMailer.send_signup_email(@user).deliver
       redirect_to(@user, :notice => 'User created')
     else
@@ -18,17 +18,25 @@ class UsersController < ApplicationController
   end
   
   def edit
+   
   end
   
-  
+  def newpoints
+    
+  end
   def addpoints
       
   end
 
+    def removepoints
+
+    end
  
   def update
+    @user = User.find(params[:id])
     @user.update(user_params)
-    redirect_to user_path(@sports)
+
+    redirect_to usersshow_path(@user)
   end
   
   

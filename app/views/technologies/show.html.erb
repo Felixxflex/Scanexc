@@ -1,5 +1,6 @@
-
-<div class="backkgr">
+<html style='background-color: #0eec84 !important'>
+<body style='background-color: #0eec84 !important'>
+<div class="backkgrrr">
 <div class='container-fluid1'>
     <div class="card22 mx-auto col-md-3 col-10 mt-5 pt-4">
         <div class="d-flex sale ">
@@ -8,7 +9,7 @@
             <%=@technologie.points%>
             </div>
             </div>
-        </div> <%= cl_image_tag @technologie.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
+        </div> <%= cl_image_tag @technologie.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "imglo"%>
         <div class="card-body text-center mx-auto">
             <h5 class="card-title"><%=@technologie.title%></h5>
             <p class="card-text"><%=@technologie.description%></p>
@@ -18,7 +19,9 @@
 </div>
 
 
-<h2 class="newcardtitle44">Get your <%=@technologie.title %></h2>
+<h2 class="newcardtitle44">When you have <%=@technologie.points%> you can buy the <%=@technologie.title %> ! <br>
+Delivery within 3 days after your purchase !</h2>
+
 <%=link_to sport_remove_points_path(:id => @technologie.id), class: "btn-floating btn-large waves-effect waves-light red" do%><svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
           <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
@@ -42,6 +45,7 @@
   </div>
  </div>
  <div class="right-side">
+
   <div class="new">New Transaction</div>
 
    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 451.846 451.847"><path d="M345.441 248.292L151.154 442.573c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744L278.318 225.92 106.409 54.017c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.287 194.284c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#cfcfcf"/></svg>
@@ -49,3 +53,6 @@
  </div>
 </div>
 </div>
+
+</body>
+</html>

@@ -9,21 +9,20 @@ class TechnologiesController < ApplicationController
     end
 
     def update_points
-    @technologie = Technologie.find(params[:id])
-    @user = current_user
-    if @user.winpoints == @technologie.points || @user.winpoints >= @technologie.points
-      @user.winpoints -= @technologie.points
-      if @user.save
-        redirect_to usersshow_path(@user)
+      @technologie = Technologie.find(params[:id])
+      @user = current_user
+      if @user.winpoints == @technologie.points || @user.winpoints >= @technologie.points
+        @user.winpoints -= @technologie.points
+        if @user.save
+          redirect_to usersshow_path(@user)
+        else
+          render :edit
+        end
       else
-        render :edit
+        redirect_to usersshow_path(@user), notice: 'You have to scan more my Bre'
       end
-    else
-      redirect_to usersshow_path(@user), notice: 'Scan more bro'
     end
-  end
-
-
+    
     def show
 
 

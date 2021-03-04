@@ -1,20 +1,206 @@
-<div class="scanexcbg">
+<html style='overflow: hidden !important;width: 100% !important;height: 100% !important;'>
+<body style='overflow: hidden !important;width: 100% !important;height: 100% !important;'>
+<div class="scene">
+  <svg class="circle" viewBox="0 0 400 400">
+    <path class="half" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" d="M1,200 a199,199 0 0,1 398,0"/>
+    <path class="half" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" d="M399,200 a199,199 0 0,1 -398,0"/>
+    <path class="active-nav" stroke="#fff" stroke-width="2" fill="none" d="M200,1 a199,199 0 0,1 0,398 a199,199 0 0,1 0,-398"/>
+  </svg>
+  <div class="rotater">
+    <div class="rotater--line left"></div>
+    <div class="rotater--line right"></div>
+  </div>
+  <div class="nav-elems">
+  <div class="h1behave">
+    <h1 class="heading invisible"><span class="numbers">
+    <a href="/path/businesses/business"><span><i class="fas fa-store-alt" id="locospan2"></i></span></a>
+    <a href="/flats"><span><i class="fa fa-map-marked-alt" id="locospan1"></i></span></a>
+    <a href="/path/wins/windirection"><span><i class="fa fa-trophy" id="locospan3"></i></span></a>
+    <a href="/path/users/show"><span><i class="fa fa-user" id="locospan4"></i></span></a>
+    <a href="/path/questions"><span><i class="fa fa-question" id="locospan5"></i></span></a>
+    <a href="/path/share"><span><i class="fa fa-share" id="locospan6"></i></span></a>
 
-<nav class="menu">
-   <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
-   <label class="menu-open-button" for="menu-open", remote: true>
-    <span class="lines line-1"></span>
-    <span class="lines line-2"></span>
-    <span class="lines line-3"></span>
-  </label>
+    
+    </span></h1>
+    </div>
+    <div data-page="1" class="nav-el nav-el-1"></div>
+    <div data-page="2" class="nav-el nav-el-2"></div>
+    <div data-page="3" class="nav-el nav-el-3"></div>
+    <div data-page="4" class="nav-el nav-el-4"></div>
+    <div data-page="5" class="nav-el nav-el-5"></div>
+    <div data-page="6" class="nav-el nav-el-6"></div>
+  </div>
+  <div class="pages removed">
+    <div class="page page-1">
+    </div>
+    <div class="page page-2"></div>
+    <div class="page page-3"></div>
+    <div class="page page-4"></div>
+    <div class="page page-5"></div>
+    <div class="page page-6"></div>
+  
+    </div>
+  </div>
+</body>
+</html>
 
-   <a href="/flats" class="menu-item blue", remote: true> <i class="fa fa-map-marked-alt"></i> </a>
-   <a href="/businesses" class="menu-item green", remote: true> <i class="fas fa-laptop-house"></i> </a>
-   <a href="/technologies" class="menu-item red", remote: true> <i class="fa fa-trophy"></i> </a>
-   <a href="/path/users/show" class="menu-item purple", remote: true> <i class="fa fa-user"></i> </a>
-   <a href="/path/questions" class="menu-item orange", remote: true> <i class="fa fa-question"></i> </a>
-   <a href="/path/share" class="menu-item lightblue", remote: true> <i class="fa fa-share"></i> </a>
 
-</nav>
 
-</div>
+<script>
+$(document).ready(function() {
+  
+  var $half = $(".circle .half"),
+      halfLen = $half[0].getTotalLength(),
+      $nav = $(".circle .active-nav"),
+      navLen = $nav[0].getTotalLength(),
+      $pages = $(".pages"),
+      scrolling  = false,
+      curPage = 1,
+      numOfPages = $(".page").length,
+      headingH = $(".heading").height(),
+      SPHASE1 = 500,
+      SPHASE2 = 300,
+      SPHASE3 = 900,
+      SDELAY = SPHASE1 + SPHASE2 + SPHASE3,
+      SDUR = 600,
+      SDOTS = SDELAY + SDUR,
+      DOTTRANSTIME = 300,
+      SDOTSRDY = SDOTS + DOTTRANSTIME + (numOfPages - 2) * 100,
+      PAGETRANSITION = 700;
+  
+  $half.velocity({strokeDasharray: halfLen, strokeDashoffset: halfLen}, {duration: 0});
+  $nav.velocity({strokeDasharray: navLen, strokeDashoffset: navLen}, {duration: 0});
+  $(".circle").css("opacity", 1);
+  $(".rotater").addClass("phase1");
+  
+  setTimeout(function() {
+    $(".rotater").removeClass("phase1").addClass("phase2");
+    
+    setTimeout(function() {
+      $(".rotater").removeClass("phase2").addClass("phase3");
+    }, SPHASE2);
+    
+  }, SPHASE1);
+  
+  $half.delay(SDELAY).velocity({strokeDashoffset: 0}, {duration: SDUR, easing: "ease-in"});
+  
+  setTimeout(function() {
+    $(".nav-el").addClass("showing visible");
+  }, SDOTS);
+  
+  setTimeout(function() {
+    $(".nav-el").removeClass("showing").addClass("white");
+    $(".nav-el-1").addClass("active");
+    $(".heading").removeClass("invisible");
+    $pages.removeClass("removed");
+    
+    setTimeout(function() {
+      activateHandlers();
+    }, PAGETRANSITION + 300);
+  }, SDOTSRDY);
+  
+  function pagination(page) {
+    scrolling = true;
+    curPage = page;
+    $(".nav-el").removeClass("active");
+    $(".nav-el-" + page).addClass("active");
+    var newNavLen = navLen - navLen / 6 * (page - 1);
+    $nav.velocity({strokeDashoffset: newNavLen}, {duration: PAGETRANSITION});
+    $(".numbers").css("transform", "translateY("+ (0 - (page - 1) * headingH) +"px)");
+    $pages.css("transform", "translate3D(0,"+ (0 - (page - 1) * 100) +"%,0)");
+    
+    setTimeout(function() {
+      scrolling = false;
+    }, PAGETRANSITION);
+  }
+  
+  function navigateUp() {
+    if (curPage > 1) {
+      curPage--;
+      pagination(curPage);
+    }
+  }
+
+  function navigateDown() {
+    if (curPage < numOfPages) {
+      curPage++;
+      pagination(curPage);
+    }
+  }
+  
+  function activateHandlers() {
+    
+    $(document).on("mousewheel DOMMouseScroll", function(e) {
+      if (!scrolling) {
+        if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+          navigateUp();
+        } else { 
+          navigateDown();
+        }
+      }
+    });
+
+    $(document).on("click", ".nav-el", function() {
+      var pg = +$(this).attr("data-page");
+      pagination(pg);
+    });
+    
+    $(document).on("keydown", function(e) {
+      if (scrolling) return;
+      if (e.which === 38) {
+        navigateUp();
+      } else if (e.which === 40) {
+        navigateDown();
+      }
+    });
+
+    $(window).resize(function() {
+      headingH = $(".heading").height();
+    });
+    
+  }
+  
+  var diff = 0;
+  
+  $(document).on("touchstart", ".page", function(e) {
+    var startY = e.originalEvent.touches[0].pageY;
+    $pages.addClass("instant");
+    
+    $(document).on("touchmove", function(e) {
+      var y = e.originalEvent.touches[0].pageY;
+      diff = (y - startY) / $(".page").height();
+      $pages.css("transform", "translate3D(0,"+ (0 - (curPage - 1 - diff) * 100) +"%,0)");
+      
+    });
+    
+  });
+  
+  $(document).on("touchend", function(e) {
+    $pages.removeClass("instant");
+    $(document).off("touchmove");
+    if (diff > 0.05) {
+      if (curPage === 1) {
+        pagination(1);
+        diff = 0;
+        return;
+      }
+      navigateUp();
+    } else if (diff < -0.05) {
+      if (curPage === numOfPages) {
+        pagination(numOfPages);
+        diff = 0;
+        return;
+      }
+      navigateDown();
+    } else if (!diff) {
+      return;
+    } else {
+      $pages.css("transform", "translate3D(0,"+ (0 - (curPage - 1) * 100) +"%,0)");
+    }
+    diff = 0;
+  });
+  
+});
+</script>
+
+

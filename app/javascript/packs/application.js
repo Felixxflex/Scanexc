@@ -31,6 +31,9 @@ require("channels")
 import "bootstrap";
 import "@fortawesome/fontawesome-free/js/all";
 import { initMapbox } from '../plugins/init_mapbox';
+import { startUserTimer } from '../plugins/userTimer';
+import { updateUserPoints } from '../plugins/updateUserPoints';
+
 
 
 // Internal imports, e.g:
@@ -38,6 +41,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
     initMapbox();
+    if (window.location.href.includes("/users")) { //Only call js on specific pages for efficency
+        startUserTimer();
+        updateUserPoints();
+    }
     // Call your functions here, e.g:
     // initSelect2();
 });

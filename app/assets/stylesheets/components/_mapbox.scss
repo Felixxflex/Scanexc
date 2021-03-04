@@ -1,9 +1,3 @@
-// #map {
-//     height: 25rem;
-//     width: 24rem;
-//     border-radius: 0rem;
-//     margin-top: -15rem;
-// }
 #map {
     position: absolute;
     top: 0;
@@ -243,4 +237,18 @@ $bcolors in $btns {
             color: map-get($bcolors, tend);
         }
     }
+}
+
+.btn--alpha {
+    background-color: #7bf1a8;
+    color: #f0f4f5;
+    margin-top: 41rem;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 162% !important;
 }

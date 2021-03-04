@@ -1,0 +1,357 @@
+.slidermiddle {
+    align-items: center;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+}
+
+@mixin white-gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 40s;
+// Animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+// Styling
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 89%;
+    border-radius: 2rem !important;
+    &::before,
+    &::after {
+        @include white-gradient;
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    &::before {
+        left: 0;
+        top: 0;
+    }
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+    }
+    .slide {
+        height: 100px;
+        width: 250px;
+    }
+}
+
+//searchbar
+//buiz cards
+.counter {
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    height: 210px;
+    width: 137px;
+    padding: 7px 4px 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.counter:before {
+    content: '';
+    background-color: #fff;
+    height: 122px;
+    width: 122px;
+    border-radius: 15px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    z-index: -1;
+}
+
+.counter .counter-icon {
+    color: #fff;
+    background: linear-gradient(#F83F83, #E2056F);
+    line-height: 70px;
+    font-size: 35px;
+    height: 70px;
+    width: 58px;
+    margin: 0 auto 8px;
+    border-radius: 19px 0 50px;
+    transform: rotate(45deg);
+}
+
+.counter .counter-icon i {
+    transform: rotate(-45deg);
+}
+
+.counter .counter-value {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 13px 0;
+    display: block;
+}
+
+.counter h3 {
+    color: #fff;
+    background: linear-gradient(#F83F83, #E2056F);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 10px 5px;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+}
+
+.counter h3:before,
+.counter h3:after {
+    content: "";
+    background: linear-gradient(to right bottom, transparent 49%, #c90460 50%);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -2;
+}
+
+.counter h3:after {
+    transform: rotateY(180deg);
+    left: auto;
+    right: 0;
+}
+
+.counter.purple .counter-icon,
+.counter.purple h3 {
+    background: linear-gradient(#B05FDF, #7B26DD);
+}
+
+.counter.purple h3:before,
+.counter.purple h3:after {
+    background: linear-gradient(to right bottom, transparent 49%, #5a07bf 50%);
+}
+
+.counter.blue .counter-icon,
+.counter.blue h3 {
+    background: linear-gradient(#00BCF9, #027AF6);
+}
+
+.counter.blue h3:before,
+.counter.blue h3:after {
+    background: linear-gradient(to right bottom, transparent 49%, #0466c9 50%);
+}
+
+.counter.green .counter-icon,
+.counter.green h3 {
+    background: linear-gradient(#aff400, #6cc425);
+}
+
+.counter.green h3:before,
+.counter.green h3:after {
+    background: linear-gradient(to right bottom, transparent 49%, #489e03 50%);
+}
+
+@media screen and (max-width:990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
+
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+#smallchange {
+    top: -7rem;
+}
+
+.h1div {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive !important;
+    margin-top: -14rem;
+}
+
+.h1buiz {
+    font-size: 5.5rem;
+}
+
+a {
+    color: rgb(17, 15, 15) !important;
+}
+
+#iconbuiz {
+    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 3px;
+    height: 1em;
+    transform: rotate(-45deg);
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+.profile-card-inf__txt {
+    font-weight: 500;
+    margin-top: 7px;
+    font-size: 2rem;
+}
+
+.profile-card-social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 3rem;
+}
+
+.profile-card__name {
+    font-weight: 700;
+    font-size: 30px !important;
+    margin-bottom: 15px;
+    color: black !important;
+}
+
+.profile-card__img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0px 5px 50px 0px #5adbff, 0px 0px 0px 7px #369db9 !important;
+}
+
+//table
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tbl-header {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tbl-content {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+section {
+    margin: 50px;
+}
+
+
+/* follow me template */
+
+.made-with-love {
+    margin-top: 40px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+    color: #fff;
+}
+
+.made-with-love i {
+    font-style: normal;
+    color: #F50057;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+
+.made-with-love a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.made-with-love a:hover {
+    text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+ ::-webkit-scrollbar {
+    width: 6px;
+}
+
+ ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+ ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}

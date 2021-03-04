@@ -1,4 +1,6 @@
-<div class="backkgr">
+<html style='background-color: #0eec84 !important'>
+<body style='background-color: #0eec84 !important'>
+<div class="backkgrrr">
 <div class='container-fluid1'>
     <div class="card22 mx-auto col-md-3 col-10 mt-5 pt-4">
         <div class="d-flex sale ">
@@ -7,7 +9,7 @@
             <%=@sport.winpoints%>
             </div>
             </div>
-        </div> <%= cl_image_tag @sport.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
+        </div> <%= cl_image_tag @sport.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "imglo"%>
         <div class="card-body text-center mx-auto">
             <h5 class="card-title"><%=@sport.title%></h5>
             <p class="card-text"><%=@sport.description%></p>
@@ -43,4 +45,6 @@
  </div>
 </div>
 </div>
-    <%=link_to sport_remove_points_path(current_user)%> 
+</body>
+</html>
+    <%# <%=link_to sport_remove_points_path(current_user)%>  

@@ -1,3 +1,5 @@
+<html style='background-color: #0eec84 !important'>
+<body style='background-color: #0eec84 !important'>
 <div class="newback">
 <h1 class="newcardtitle">This Month :</h1>
 <div class="newoptions">
@@ -17,6 +19,8 @@
 </div>
 
 
+
+
 <%@gadgets.each do |gadget|%>
 <div class="backkgr">
 <div class='container-fluid'>
@@ -27,7 +31,7 @@
             <%=gadget.points%>
             </div>
             </div>
-        </div> <%= cl_image_tag gadget.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "img"%>
+        </div> <%= cl_image_tag gadget.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "imglo"%>
         <div class="card-body text-center mx-auto">
         <%= link_to gadget_path(gadget) do %> 
             <h5 class="card-title"><%=gadget.title%></h5>
@@ -37,6 +41,8 @@
     </div>
 </div>
 </div>
+</body>
+</html>
 <%end%>
 
 <script>
