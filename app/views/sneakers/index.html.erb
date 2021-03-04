@@ -1,3 +1,5 @@
+<html style='background-color: #0eec84 !important'>
+<body style='background-color: #0eec84 !important'>
 <div class="newback">
 <h1 class="newcardtitle">This Month :</h1>
 <div class="newoptions">
@@ -16,15 +18,7 @@
 </div>
 </div>
 
-<div>
-  <div class="container8976">
-    <ul class="locogp">
- 
-      <li class="newgogp"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-     
-    </ul>
-  </div>
-</div>
+
 
         <%@sneakers.each do |sneaker|%>
             
@@ -34,7 +28,7 @@
     
     <div class="card2" style="">
     <div>
-   <%= cl_image_tag sneaker.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill%> 
+   <%= cl_image_tag sneaker.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, class: 'imglo'%> 
         <%= link_to sneaker_path(sneaker) do %> 
         <h1><%= sneaker.title %></h1>
         <p><%= sneaker.description%></p>
@@ -47,10 +41,11 @@
     </div>
   </div>
  </div> 
-    
+  
   
 </section>
-
+</body>
+</html>
 <%end%>
 
 <script>

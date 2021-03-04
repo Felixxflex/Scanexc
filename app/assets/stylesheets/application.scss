@@ -17,21 +17,23 @@
 
 
 /*
+ *= require font-awesome
+*/
+
+
+/*
  *= require mapbox-gl
  */
 
 // Graphical variables
 // External libraries
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import '@fortawesome/fontawesome-free/scss/regular';
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
 @import "bootstrap/scss/bootstrap";
 @import 'mapbox-gl/dist/mapbox-gl';
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
-// Your CSS partials
+@import "font-awesome"; // Your CSS partials
 @import "pages/index";
 @import "social-share-button";

@@ -201,8 +201,9 @@
     display: flex;
     justify-content: center;
     font-family: 'Fredoka One', cursive;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
     color: whitesmoke;
 }
 
@@ -218,4 +219,8 @@
     border: 1px solid transparent;
     border-radius: 0.25rem;
     display: none;
+}
+
+.new {
+    font-family: 'Fredoka One', cursive;
 }
