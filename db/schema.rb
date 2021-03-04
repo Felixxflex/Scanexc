@@ -72,7 +72,10 @@ ActiveRecord::Schema.define(version: 2021_02_26_094446) do
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7affd3698608ea3f58db9690d3c1d32b5fce6c61
   create_table "locals", force: :cascade do |t|
     t.string "business_address"
     t.text "business_description"
@@ -109,7 +112,10 @@ ActiveRecord::Schema.define(version: 2021_02_26_094446) do
     t.integer "total_scans"
   end
 
+<<<<<<< HEAD
 >>>>>>> 9da2da0c6cdf268b2fb6f00cd4c9582ded75c683
+=======
+>>>>>>> 7affd3698608ea3f58db9690d3c1d32b5fce6c61
   create_table "sneakers", force: :cascade do |t|
     t.string "title"
     t.text "description"

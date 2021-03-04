@@ -2,10 +2,10 @@ class TechnologiesController < ApplicationController
     skip_before_action :authenticate_user!, :raise => false
     before_action :set_technologie, only: [:show]
     http_basic_authenticate_with :name => 'FelixxFel', :password => 'Jordanshacker1710.shivflex.2020', only: :new
-  
-    
+
+
     def index
-        @technologies = Technologie.all 
+        @technologies = Technologie.all
     end
 
     def update_points
@@ -24,21 +24,21 @@ class TechnologiesController < ApplicationController
     end
     
     def show
-      
-        
-        
+
+
+
     end
-  
+
     def new
       @technologie = Technologie.new()
     end
-  
-    
-    
+
+
+
     def create
-    
+
     @technologies = Technologie.new(technologie_params)
-      
+
       if @technologies.save
         redirect_to technologies_path(@technologie)
       else
@@ -64,7 +64,7 @@ end
 private
 
 def set_technologie
-@technologie = Technologie.find(params[:id])   
+@technologie = Technologie.find(params[:id])
 end
 
 def technologie_params
