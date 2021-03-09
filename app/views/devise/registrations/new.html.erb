@@ -1,9 +1,11 @@
-<html style='background-color: #7BF1A8 !important'>
-<body style='background-color: #7BF1A8 !important'>
-<div class="newcontact">
-  <div class="wrapper">
-      <div class="form">
-      <h1 class="newcardtitlelogin"><img class="loginlogo" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1612802438/bigletterlogo_hp63sf.png"></h1>
+<html style='background-color: #20E0B2 !important'>
+<body style='background-color: #20E0B2 !important'>
+<div class="newgo9">
+<div class="wrap-login1003 p-l-55 p-r-55 p-t-80 p-b-30">
+      <div class="newlogoplace">
+      <h1 class="newcardtitlelogin"><img class="loginlogo" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615285509/SCANEXC._basic-file_bd19ts.png"></h1>
+      </div>
+  <div class="yessir">
       <%= simple_form_for(resource, as: resource_name, remote: true, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
@@ -49,44 +51,6 @@
         %>
        <%# <div class="field">
         <%= f.input :photo, label: 'Avatar', as: :file %> 
-
-      <h1 class="newcardtitlelogin">Delivery Information</h1>
-      <%= f.input :house_number,
-        required: true,
-        autofocus: true,
-        class: "form control",
-        type: "text",
-        placeholder: "House Number"
-        %>
-        <%= f.input :street_name,
-        required: true,
-        autofocus: true,
-        class: "form control",
-        type: "text",
-        placeholder: "Street"
-        %>
-        <%= f.input :city,
-        required: true,
-        autofocus: true,
-        class: "form control",
-        type: "text",
-        placeholder: "City"
-        %>
-        <%= f.input :plz,
-        required: true,
-        autofocus: true,
-        class: "form control",
-        type: "text",
-        placeholder: "Plz"
-        %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
-
-      
-      
-      
-
-      
        <div class="form-actions mt-2">
        <div class="newseperator">
         <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block", id:"btnform2" %>
@@ -94,7 +58,7 @@
       </div>
       <% end %>
 
-      <div class="separator my-3">Already have an account?</div>
+      <div class="separator2 my-3">Already have an account?</div>
       <div class="newseperator">
       <%= render "devise/shared/signin_btn" %>
       </div>
