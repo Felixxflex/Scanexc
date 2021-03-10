@@ -39,7 +39,13 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card23 p-3" style="border-radius: 1.25rem !important;">
-                <div class="d-flex flex-row mb-3"><img src="https://i.imgur.com/ccMhxvC.png" width="70">
+                <div class="d-flex flex-row mb-3"><% if current_user.photo.attached? %>
+                <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
+                <% elsif current_user.avatar_url? %>
+                <%= image_tag current_user.avatar_url, class: "profile-pic" %>
+                <% else %>
+                <%= image_tag "https://i.imgur.com/ccMhxvC.png", class: "profile-pic" %>
+                <% end %>
                 <%= link_to store_path(store) do %> 
                     <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=store.business_title%></span><span class="text-black-50">Scans : <%=store.total_scans%></span><span class="ratings"></span></div>
                 </div>
