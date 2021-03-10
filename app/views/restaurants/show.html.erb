@@ -6,7 +6,9 @@
   
   <div class="profile-card js-profile-card">
     <div class="profile-card__img">
-      
+      <% if @restaurant.business_image.attached? %>
+      <%= cl_image_tag @restaurant.business_image.key, class: "profile-pic" %>
+      <% end %>
     </div>
 
     <div class="profile-card__cnt js-profile-cnt">
@@ -65,9 +67,9 @@
       </div>
 
       <div class="profile-card-ctr">
-        <button class="profile-card__button button--blue js-message-btn">Website</button>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=<%=@restaurant.business_address%>"><button class="profile-card__button button--blue js-message-btn">Get the Way</button></a>
-        <button class="profile-card__button button--blue js-message-btn">Website</button>
+        <a href="<%=@restaurant.business_website%>"><button class="profile-card__button button--blue js-message-btn">Website</button></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=<%=@restaurant.business_address%>"><button id="newbtnway" class="profile-card__button button--blue js-message-btn">Get the Way</button></a>
+        <button class="profile-card__button button--blue js-message-btn">Delivery</button>
       </div>
     </div>
 
