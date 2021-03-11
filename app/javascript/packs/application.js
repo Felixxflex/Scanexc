@@ -33,6 +33,7 @@ import "@fortawesome/fontawesome-free/js/all";
 import { initMapbox } from '../plugins/init_mapbox';
 import { startUserTimer } from '../plugins/userTimer';
 import { updateUserPoints } from '../plugins/updateUserPoints';
+import { newPointsAnimation } from '../plugins/newPointsAnimation';
 
 
 
@@ -44,6 +45,7 @@ document.addEventListener('turbolinks:load', () => {
     if (window.location.href.includes("/users")) { //Only call js on specific pages for efficency
         startUserTimer();
         updateUserPoints();
+        newPointsAnimation();
     }
     // Call your functions here, e.g:
     // initSelect2();
