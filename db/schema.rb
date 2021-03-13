@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_094446) do
+ActiveRecord::Schema.define(version: 2021_03_11_164510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,11 +71,6 @@ ActiveRecord::Schema.define(version: 2021_02_26_094446) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7affd3698608ea3f58db9690d3c1d32b5fce6c61
   create_table "locals", force: :cascade do |t|
     t.string "business_address"
     t.text "business_description"
@@ -110,12 +105,11 @@ ActiveRecord::Schema.define(version: 2021_02_26_094446) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
+    t.string "cusine"
+    t.string "price"
+    t.string "delivery"
   end
 
-<<<<<<< HEAD
->>>>>>> 9da2da0c6cdf268b2fb6f00cd4c9582ded75c683
-=======
->>>>>>> 7affd3698608ea3f58db9690d3c1d32b5fce6c61
   create_table "sneakers", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -149,6 +143,33 @@ ActiveRecord::Schema.define(version: 2021_02_26_094446) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
+  end
+
+  create_table "taggings", id: :serial, force: :cascade do |t|
+    t.integer "tag_id"
+    t.string "taggable_type"
+    t.integer "taggable_id"
+    t.string "tagger_type"
+    t.integer "tagger_id"
+    t.string "context", limit: 128
+    t.datetime "created_at"
+    t.index ["context"], name: "index_taggings_on_context"
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type", "context"], name: "taggings_taggable_context_idx"
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+  end
+
+  create_table "tags", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "taggings_count", default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "technologies", force: :cascade do |t|
@@ -186,4 +207,5 @@ ActiveRecord::Schema.define(version: 2021_02_26_094446) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "taggings", "tags"
 end

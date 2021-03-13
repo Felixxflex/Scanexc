@@ -2,7 +2,7 @@
 <body style='background-color: #5adbff !important'>
 
 
-   
+
         <div class="col-md-9">
             <div class="card34 p-4 mt-3">
                 <div class="d-flex justify-content-center px-5">
@@ -29,32 +29,47 @@
                             <div class="text-center mg-text"> <span class="mg-text">Product</span> </div>
                         </div>
                     </div>
-                    
+
                     </div>
                 </div>
             </div>
         </div>
 
+<%= simple_form_for :search, url: restaurants_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :name, input_html: {value: ""} %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
 
 
+<%= simple_form_for :search, url: restaurants_path, method: "GET", remote: true do |f| %>
+  <%= f.input :cusine, label: "Cusine",  collection: $cusines, as: :check_boxes, onClick: "test"%>
+  <%= f.input :price, label: "Price", collection: $prices, as: :check_boxes  %>
+  <%= link_to "Reset", restaurants_path  %>
+  <div class="col-xs-12 col-sm-8">
+   <div id="restaurants">
+     <%= render "restaurant", restaurants: @restaurants %>
+   </div>
+  </div>
+<% end %>
 
-
-<%@restaurants.each do |restaurant|%>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card23 p-3" style="border-radius: 1.25rem !important;">
-                <div class="d-flex flex-row mb-3"><img src="https://i.imgur.com/ccMhxvC.png" width="70">
-                <%= link_to restaurant_path(restaurant) do %> 
-                    <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=restaurant.business_title%></span><span class="text-black-50">Scans : <%=restaurant.total_scans%></span><span class="ratings"></span></div>
-                </div>
-                <h6 class="descriptionh6"><%=restaurant.business_description%></h6>
-                <%end%>
-                <div class="d-flex justify-content-between install mt-3"><span>Open : <%=restaurant.business_opening%></span><span class="text-primary"></span></div>
-            </div>
-        </div>
-    </div>
+<div class="col-xs-12 col-sm-8">
+ <div id="restaurants">
+   <%= render 'restaurant', restaurants: @restaurants %>
+ </div>
 </div>
-<%end%>
+
+
+
+<script type="text/javascript">
+  var checkBoxes = document.querySelectorAll(".form-check-input");
+  var form = document.querySelector('form');
+
+  for (const check of checkBoxes) {
+  check.addEventListener( 'change', function() {
+    Rails.fire(form, 'submit');
+  });
+  }
+</script>
+
 </body>
 </html>
