@@ -6,9 +6,9 @@ class Restaurant < ApplicationRecord
     acts_as_taggable_on :price
     acts_as_taggable_on :delivery
 
-    $cusine = ['Burgers', 'Alcohol', 'Breakfast', 'Cheese', 'Italian', 'Indian','French', 'Kebab' ,'Mexican','Fast Food','Thai','Chinese', 'Pizza', 'Mediterranean', 'Desserts', 'Coffee', 'Sea Food', 'Sushi', 'Healthy']
-    $delivery = ['yes', 'no']
-    $price = ['low', 'high']
+    $cusines = ['Burgers', 'Alcohol', 'Breakfast', 'Cheese', 'Italian', 'Indian','French', 'Kebab' ,'Mexican','Fast Food','Thai','Chinese', 'Pizza', 'Mediterranean', 'Desserts', 'Coffee', 'Sea Food', 'Sushi', 'Healthy']
+    $deliveries = ['yes', 'no']
+    $prices = ['low', 'high']
 
 
     include PgSearch::Model

@@ -42,8 +42,9 @@
 
 
 <%= simple_form_for :search, url: restaurants_path, method: "GET", remote: true do |f| %>
-  <%= f.input :cusine, label: "Cusine",  collection: $cusines, as: :check_boxes, onClick: "test"%>
-  <%= f.input :price, label: "Price", collection: $prices, as: :check_boxes  %>
+  <%= f.input :cusine, as: :select, collection: $cusines, prompt: 'Select Cusine', label: false %>
+  <%= f.input :price, as: :select, collection: $prices, prompt: 'Select Price', label: false %>
+  <%= f.input :delivery, as: :select, collection: $deliveries, prompt: 'Select Delivery', label: false %>
   <%= link_to "Reset", restaurants_path  %>
   <div class="col-xs-12 col-sm-8">
    <div id="restaurants">
