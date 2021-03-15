@@ -12,16 +12,18 @@ class TechnologiesController < ApplicationController
       @technologie = Technologie.find(params[:id])
       @user = current_user
       if @user.winpoints == @technologie.points || @user.winpoints >= @technologie.points
-        @user.winpoints -= @technologie.points
+        @user.winpoints -= @technologie.points 
+     
         if @user.save
-          redirect_to usersshow_path(@user)
+          redirect_to usersshow_path(@user), notice: 'You have got em, congrats mate'
         else
           render :edit
         end
       else
-        redirect_to usersshow_path(@user), notice: 'You have to scan more my Bre'
+        redirect_to notenoughpoints_path(@user)
       end
     end
+
     
     def show
 
@@ -68,7 +70,7 @@ def set_technologie
 end
 
 def technologie_params
-params.require(:technologie).permit(:title, :points, :description, :photo)
+params.require(:technologie).permit(:title, :points, :description, :photo, :stock)
 end
 
 end

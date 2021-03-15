@@ -21,6 +21,9 @@ class UsersController < ApplicationController
    
   end
   
+def notenoughpoints
+end
+
   def newpoints
     
   end

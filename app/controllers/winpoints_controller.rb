@@ -12,7 +12,7 @@ class WinpointsController < ApplicationController
     if @user.winpoints == @sport.winpoints || @user.winpoints >= @sport.winpoints
       @user.winpoints -= @sport.winpoints
       if @user.save
-        redirect_to usersshow_path(@user)
+      redirect_to usersshow_path(@user), notice: 'You have got em, congrats mate'
       else
         render :edit
       end
