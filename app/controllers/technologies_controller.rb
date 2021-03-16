@@ -15,7 +15,7 @@ class TechnologiesController < ApplicationController
         @user.winpoints -= @technologie.points 
      
         if @user.save
-          redirect_to usersshow_path(@user), notice: 'You have got em, congrats mate'
+          redirect_to congratulations_path(@user)
         else
           render :edit
         end

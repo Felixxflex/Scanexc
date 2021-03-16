@@ -21,6 +21,9 @@ Rails.application.routes.draw do
 
   get "/path/users/page", to: "users#show", as: "users"
   get "/path/users/notenoughpoints", to: "users#notenoughpoints", as: "notenoughpoints"
+  get "/path/users/congratulations", to: "users#congratulations", as: "congratulations"
+  get "/path/users/deliveryinformation", to: "users#deliveryinformation", as: "deliveryinformation"
+  get "/path/users/thankyou", to: "users#thankyou", as: "thankyou"
   get "/path/technologiesnew/page", to: "technologies#new", as: "technologiesnew"
   get "/path/share", to: "pages#share", as: "pagesshare"
   get "/path/questions", to: "pages#questions", as: "pagesquestions"
