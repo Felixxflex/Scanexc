@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
 
 
-  get "/path/businesses/business", to: "businesses#business"
+  get "/path/businesses/business", to: "businesses#business", as: "businessesbuy"
 
   get "/path/wins/windirection", to: "wins#windirection"
 
