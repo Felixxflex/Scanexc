@@ -14,12 +14,13 @@ $icon-base-size: 20px;
     display: inline-block;
     width: 8em;
     height: 8em;
-    font-size: $icon-base-size;
+    font-size: 20px;
     border-radius: 50%;
-    border: 4px solid lighten($green, 20%);
+    border: 4px solid #bed4ff;
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
+    margin-top: -20rem;
     transform-origin: center;
     animation: showSuccess 300ms ease-in-out;
     transform: scale(1);
@@ -111,8 +112,10 @@ $icon-base-size: 20px;
 
 .newh1profilesuccess1 {
     font-family: 'Fredoka One', cursive !important;
+    margin-top: -12rem;
 }
 
 .newh1profilesuccess2 {
     font-family: 'Fredoka One', cursive !important;
+    margin-top: -12rem;
 }
