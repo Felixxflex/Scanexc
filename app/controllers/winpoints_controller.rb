@@ -7,18 +7,7 @@ class WinpointsController < ApplicationController
   end
 
   def update_points
-    @sport = Sport.find(params[:id])
-    @user = current_user
-    if @user.winpoints == @sport.winpoints || @user.winpoints >= @sport.winpoints
-      @user.winpoints -= @sport.winpoints
-      if @user.save
-      redirect_to usersshow_path(@user), notice: 'You have got em, congrats mate'
-      else
-        render :edit
-      end
-    else
-      redirect_to usersshow_path(@user), notice: 'Scan more bro'
-    end
+
   end
 
   def update

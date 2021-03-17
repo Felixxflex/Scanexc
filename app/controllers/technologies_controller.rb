@@ -15,7 +15,7 @@ class TechnologiesController < ApplicationController
         @user.winpoints -= @technologie.points 
      
         if @user.save
-          redirect_to congratulations_path(@user)
+          redirect_to congratulations_path(@user) 
         else
           render :edit
         end
@@ -24,7 +24,8 @@ class TechnologiesController < ApplicationController
       end
     end
 
-    
+
+
     def show
 
 
