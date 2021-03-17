@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
         @restaurants = Restaurant.where("business_title ILIKE ?", "%#{@business_title}%")
       end
       if params['search']
-        @filter = params['search']['cusine'].concat(params['search']['price']).concat(params['search']['delivery']).flatten.reject(&:blank?)
+        @filter = params['search']['cusines'].concat(params['search']['prices']).concat(params['search']['deliveries']).flatten.reject(&:blank?)
         @restaurants = Restaurant.all.global_search("#{@filter}")
       else
         @restaurants = Restaurant.all
