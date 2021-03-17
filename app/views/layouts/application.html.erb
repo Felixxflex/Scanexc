@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js" integrity="sha384-fcLDUAwcSMMfmpKMJ0dO2//SL2WJ5/kkyz/yvgtmLXBEp3GdqrQF9ahRerhdLXn+" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/polar.otf"/>
@@ -19,9 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
-  <script>$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;});
+  <script>
+  setInterval(function(){ $('.se-pre-con').fadeOut(); 
+  }, 10);
   </script>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
