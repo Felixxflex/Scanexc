@@ -1,5 +1,5 @@
-<html style='background-color: #5adbff !important'>
-<body style='background-color: #5adbff !important'>
+<html style='background-color: #20E0B2 !important'>
+<body style='background-color: #20E0B2 !important'>
 
 
 
@@ -53,10 +53,31 @@
   </div>
 <% end %>
 
+
 <div class="col-xs-12 col-sm-8">
  <div id="restaurants">
    <%= render 'restaurant', restaurants: @restaurants %>
  </div>
+
+
+<%@restaurants.each do |restaurant|%>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card23 p-3" style="border-radius: 1.25rem !important;">
+                <div class="d-flex flex-row mb-3">
+                <% if restaurant.business_image.attached? %>
+                <%= cl_image_tag restaurant.business_image.key, class: "profile-pic2" %>
+                <% end %>
+                <%= link_to restaurant_path(restaurant) do %> 
+                    <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=restaurant.business_title%></span><span class="text-black-50">Scans : <%=restaurant.total_scans%></span><span class="ratings"></span></div>
+                </div>
+                <h6 class="descriptionh6"><%=restaurant.business_description%></h6>
+                <%end%>
+                <div class="d-flex justify-content-between install mt-3"><span>Open : <%=restaurant.business_opening%></span><span class="text-primary"></span></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

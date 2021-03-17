@@ -1,4 +1,5 @@
 class Restaurant < ApplicationRecord
+
     has_one_attached :photo
 
 
@@ -22,4 +23,7 @@ class Restaurant < ApplicationRecord
   using: {
     tsearch: { any_word: true }
   }
+end
+
+    has_one_attached :business_image
 end

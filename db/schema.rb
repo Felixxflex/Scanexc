@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_11_164510) do
+
+ActiveRecord::Schema.define(version: 2021_03_12_191920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,7 +95,6 @@ ActiveRecord::Schema.define(version: 2021_03_11_164510) do
     t.integer "business_rating"
     t.integer "business_founding"
     t.integer "business_stores"
-    t.string "business_delivery"
     t.string "business_delivery_service"
     t.string "business_website"
     t.integer "business_number"
@@ -105,9 +105,16 @@ ActiveRecord::Schema.define(version: 2021_03_11_164510) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
+
     t.string "cusine"
     t.string "price"
     t.string "delivery"
+
+    t.string "search"
+    t.boolean "business_delivery"
+    t.boolean "restaurant_type"
+    t.boolean "business_cost"
+
   end
 
   create_table "sneakers", force: :cascade do |t|
@@ -179,6 +186,7 @@ ActiveRecord::Schema.define(version: 2021_03_11_164510) do
     t.string "photo", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "stock", default: 0
   end
 
   create_table "users", force: :cascade do |t|

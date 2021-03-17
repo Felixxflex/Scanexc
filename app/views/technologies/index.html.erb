@@ -1,5 +1,5 @@
-<html style='background-color: #0eec84 !important'>
-<body style='background-color: #0eec84 !important'>
+<html style='background-color: #20E0B2 !important'>
+<body style='background-color: #20E0B2 !important'>
 <div class="newback">
 <h1 class="newcardtitle">This Month :</h1>
 
@@ -22,6 +22,7 @@
         <%= link_to technology_path(technologie) do %> 
             <h5 class="card-title"><%=technologie.title%></h5>
             <p class="card-text"><%=technologie.description%></p>
+            <p class="card-text"><%=technologie.stock%></p>
              <%end%>
         </div>
     </div>
