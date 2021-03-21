@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get "/path/users/page", to: "users#show", as: "users"
   get "/path/users/notenoughpoints", to: "users#notenoughpoints", as: "notenoughpoints"
-  get "/path/users/congratulations", to: "users#congratulations", as: "congratulations"
+  get "/path/technologies/congratulations", to: "technologies#congratulations", as: "congratulations"
   get "/path/users/deliveryinformation", to: "users#deliveryinformation", as: "deliveryinformation"
   get "/path/users/thankyou", to: "users#thankyou", as: "thankyou"
   get "/path/technologiesnew/page", to: "technologies#new", as: "technologiesnew"
@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   get "/path/businesses/business", to: "businesses#business", as: "businessesbuy"
 
-  get "/path/wins/windirection", to: "wins#windirection"
+  get "/path/wins/windirection", to: "wins#windirection", as: "wins"
 
 
   get "/path/users/newpoints", to: "users#newpoints", as: "usersnewpoints"
@@ -41,6 +41,8 @@ Rails.application.routes.draw do
 
   # get "/path/users/removepoints", to: "winpoints#update_points", as: :user_remove_points
   get "/path/users/remove_points", to: "technologies#update_points", as: :sport_remove_points
+
+  get "/path/technologie/update_stock", to: "stocks#update", as: :remove_stock
 
   get "/path/users/addpoints", to: "winpoints#update", as: :user_add_points
 end

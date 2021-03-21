@@ -9,11 +9,17 @@
             <div class="congratulationdisplay-subheader">You were fast enough to get a present! Now we just need your delivery Information.</div>
         </div>
         <div class="congratulationdisplay-bottom">
-        <a href="/path/users/deliveryinformation" class="acongrats"><button class="congratulationdisplay-btn u-btn u-btn--share">Delivery Information</button></a>
+        <%@sneakers.each do |sneaker|%>
+
+        <%# <a href="/path/users/deliveryinformation" class="acongrats"> %>
+        <%=link_to remove_stock_path(:id => sneaker.id) do %>
+        <button class="congratulationdisplay-btn u-btn u-btn--share">Delivery Information</button></a>
+        <%end%>
         </div>
     </div>
 </div>
 </div>
+<%end%>
 </body>
 </html>
 

@@ -1,0 +1,30 @@
+<html style='background-color: #20E0B2 !important; overflow: hidden !important'>
+<body style='background-color: #20E0B2 !important; overflow: hidden !important'>
+<div class="newcong">
+<div class="wrappercongrats">
+    <div class="congratulationdisplay congratulationdisplay--congratulations">
+        <div class="congratulationdisplay-top">
+            <img class="congratulationdisplay-icon u-imgResponsive" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615909331/emojipng.com-706808_qfjmpc.png" alt="Trophy" />
+            <div class="congratulationdisplay-header">Congratulations!</div>
+            <div class="congratulationdisplay-subheader">You were fast enough to get a present! Now we just need your delivery Information.</div>
+        </div>
+        <div class="congratulationdisplay-bottom">
+        <%@gadgets.each do |gadget|%>
+
+        <%# <a href="/path/users/deliveryinformation" class="acongrats"> %>
+        <%=link_to remove_stock_path(:id => gadget.id) do %>
+        <button class="congratulationdisplay-btn u-btn u-btn--share">Delivery Information</button></a>
+        <%end%>
+        </div>
+    </div>
+</div>
+</div>
+<%end%>
+</body>
+</html>
+
+<div  class="se-pre-con">
+	<div class="loadimg">
+		<img  class="imgloadborder" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615987378/Dual_Ball-1s-200px_fsqs5d.gif" />
+	</div>
+</div>

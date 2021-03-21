@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2021_03_12_191920) do
 
   # These are extensions that must be enabled in order to support this database
@@ -105,16 +104,13 @@ ActiveRecord::Schema.define(version: 2021_03_12_191920) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
-
-    t.string "cusine"
-    t.string "price"
-    t.string "delivery"
-
     t.string "search"
     t.boolean "business_delivery"
     t.boolean "restaurant_type"
     t.boolean "business_cost"
-
+    t.string "cusine"
+    t.string "price"
+    t.string "delivery"
   end
 
   create_table "sneakers", force: :cascade do |t|

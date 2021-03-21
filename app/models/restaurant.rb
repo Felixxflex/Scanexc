@@ -1,6 +1,6 @@
 class Restaurant < ApplicationRecord
 
-    has_one_attached :photo
+  has_one_attached :business_image
 
 
     acts_as_taggable_on :cusine
@@ -25,5 +25,4 @@ class Restaurant < ApplicationRecord
   }
 end
 
-    has_one_attached :business_image
-end
+

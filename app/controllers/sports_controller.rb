@@ -8,18 +8,27 @@ class SportsController < ApplicationController
       @sports = Sport.all
   end
 
-def removepoints
-  @sport = Sport.find(4)
-  @user = current_user
-  if @user.winpoints == @sport.winpoints
-    return @user.winpoints -= @sport.winpoints
-  elsif @user.winpoints >= @sport.winpoints 
-    return @user.winpoints -= @sport.winpoints
-  end 
-end
+  def update_points
+    @sport = Sport.find(params[:id])
+    @user = current_user
+    if @user.winpoints == @sport.points || @user.winpoints >= @sport.points
+      @user.winpoints -= @sport.points 
+   
+      if @user.save
+        redirect_to congratulations_path(@user) 
+      else
+        render :edit
+      end
+    else
+      redirect_to notenoughpoints_path(@user)
+    end
+  end
    
   def show
-    
+    @sport = Sport.find(params[:id])
+    if @sport.stock == 0
+      redirect_to sports_path(@sport)
+    end
   end
 
   def new

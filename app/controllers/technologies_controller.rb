@@ -13,7 +13,6 @@ class TechnologiesController < ApplicationController
       @user = current_user
       if @user.winpoints == @technologie.points || @user.winpoints >= @technologie.points
         @user.winpoints -= @technologie.points 
-     
         if @user.save
           redirect_to congratulations_path(@user) 
         else
@@ -24,12 +23,16 @@ class TechnologiesController < ApplicationController
       end
     end
 
-
+    def congratulations
+      @technologies = Technologie.all
+    end
+    
 
     def show
-
-
-
+      @technologie = Technologie.find(params[:id])
+      if @technologie.stock == 0
+        redirect_to technologies_path(@technologie)
+      end
     end
 
     def new
@@ -43,7 +46,7 @@ class TechnologiesController < ApplicationController
     @technologies = Technologie.new(technologie_params)
 
       if @technologies.save
-        redirect_to technologies_path(@technologie)
+        redirect_to usersshow_path(@user)
       else
         render :new
     end

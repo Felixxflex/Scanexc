@@ -68,7 +68,7 @@ var particles = new THREE.Geometry();
 
 var texts = [];
 
-var pMaterial = new THREE.PointCloudMaterial({
+var pMaterial = new THREE.PointsMaterial({
 			size: particleSize,
 });
 
@@ -137,7 +137,7 @@ function enableTrigger(trigger, idx){
 	}
 }
 
-var particleSystem = new THREE.PointCloud(
+var particleSystem = new THREE.Points(
     particles,
     pMaterial
 );
@@ -216,7 +216,7 @@ Power2.easeOut, speed: normalSpeed, delay: 0.2});
 
 <div  class="se-pre-con">
 	<div class="loadimg">
-		<img  class="imgloadborder" alt="Loading" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615987378/Dual_Ball-1s-200px_fsqs5d.gif" />
+		<img  class="imgloadborder"  src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615987378/Dual_Ball-1s-200px_fsqs5d.gif" />
 	</div>
 </div>
 
