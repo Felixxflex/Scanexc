@@ -2,6 +2,17 @@
 <body style='background-color: #20E0B2 !important'>
 
 
+  <%# <%@restaurants.each do |restaurant| %> 
+    <%# <h3><%= restaurant.business_title</h3> %>
+    <%# <p><%= restaurant.business_description %> 
+    <%# <button class="btn-primary"> %>
+      <%# <%= restaurant.business_opening %> 
+    <%# </button> %>
+    <%# <button class="btn-danger"> %>
+      <%# <%= restaurant.business_rating %> 
+    <%# </button> %>
+  <%# <% end %> 
+
 
         <div class="col-md-9">
             <div class="card34 p-4 mt-3">
@@ -35,29 +46,29 @@
             </div>
         </div>
 
-<%= simple_form_for :search, url: restaurants_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :name, input_html: {value: ""} %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
-<% end %>
+<%# <%= simple_form_for :search, url: restaurants_path, method: "GET", html: { class: 'form-inline' } do |f| %> 
+  <%# <%= f.input :name, input_html: {value: ""} %> 
+  <%# <%= f.submit "Search", class: "btn btn-primary" %> 
+<%# <% end %> 
 
 
-<%= simple_form_for :search, url: restaurants_path, method: "GET", remote: true do |f| %>
-  <%= f.input :cusine, as: :select, collection: $cusines, prompt: 'Select Cusine', label: false %>
-  <%= f.input :price, as: :select, collection: $prices, prompt: 'Select Price', label: false %>
-  <%= f.input :delivery, as: :select, collection: $deliveries, prompt: 'Select Delivery', label: false %>
-  <%= link_to "Reset", restaurants_path  %>
-  <div class="col-xs-12 col-sm-8">
-   <div id="restaurants">
-     <%= render "restaurant", restaurants: @restaurants %>
-   </div>
-  </div>
-<% end %>
+<%# <%= simple_form_for :search, url: restaurants_path, method: "GET", remote: true do |f| %> 
+  <%# <%= f.input :cusine, as: :select, collection: $cusines, prompt: 'Select Cusine', label: false %> 
+  <%# <%= f.input :price, as: :select, collection: $prices, prompt: 'Select Price', label: false %> 
+  <%# <%= f.input :delivery, as: :select, collection: $deliveries, prompt: 'Select Delivery', label: false %> 
+  <%# <%= link_to "Reset", restaurants_path  %> 
+  <%# <div class="col-xs-12 col-sm-8"> %>
+   <%# <div id="restaurants"> %>
+     <%# <%= render "restaurant", restaurants: @restaurants %> 
+   <%# </div> %>
+  <%# </div> %>
+<%# <% end %> 
 
 
-<div class="col-xs-12 col-sm-8">
- <div id="restaurants">
-   <%= render 'restaurant', restaurants: @restaurants %>
- </div>
+<%# <div class="col-xs-12 col-sm-8"> %>
+ <%# <div id="restaurants"> %>
+   <%# <%= render 'restaurant', restaurants: @restaurants %> 
+ <%# </div> %>
 
 
 <%@restaurants.each do |restaurant|%>
@@ -79,7 +90,7 @@
         </div>
     </div>
 </div>
-
+<%end%>
 
 
 <script type="text/javascript">

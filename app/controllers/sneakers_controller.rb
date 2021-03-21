@@ -9,11 +9,27 @@ class SneakersController < ApplicationController
     end
 
   
+    def update_points
+      @sneaker = Sneaker.find(params[:id])
+      @user = current_user
+      if @user.winpoints == @sneaker.points || @user.winpoints >= @sneaker.points
+        @user.winpoints -= @sneaker.points 
+     
+        if @user.save
+          redirect_to congratulations_path(@user) 
+        else
+          render :edit
+        end
+      else
+        redirect_to notenoughpoints_path(@user)
+      end
+    end
      
     def show
-      
-        
-        
+      @sneaker = Sneaker.find(params[:id])
+      if @sneaker.stock == 0
+        redirect_to sneakers_path(@sneaker)
+      end
     end
   
     def new

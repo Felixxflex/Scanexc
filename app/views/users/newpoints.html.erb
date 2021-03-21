@@ -64,7 +64,7 @@ var particles = new THREE.Geometry();
 
 var texts = [];
 
-var pMaterial = new THREE.PointCloudMaterial({
+var pMaterial = new THREE.PointsMaterial({
 			size: particleSize,
 });
 
@@ -133,7 +133,7 @@ function enableTrigger(trigger, idx){
 	}
 }
 
-var particleSystem = new THREE.PointCloud(
+var particleSystem = new THREE.Points(
     particles,
     pMaterial
 );

@@ -22,7 +22,14 @@
         <%= link_to technology_path(technologie) do %> 
             <h5 class="card-title"><%=technologie.title%></h5>
             <p class="card-text"><%=technologie.description%></p>
-            <p class="card-text"><%=technologie.stock%></p>
+            <p class="card-text">
+            <% if technologie.stock >= 1 %>
+            <%= technologie.stock %>
+            <% else %>
+            <%= 'SOLD OUT' %>
+            <%end%>
+            </p>
+        
              <%end%>
         </div>
     </div>
@@ -32,15 +39,7 @@
 </html>
 <%end%>
 
-<script>
- var plus = document.getElementById('plus');
 
- function plusToggle() {
-    plus.classList.toggle('plus--active');
-}
-
-plus.addEventListener('click', plusToggle);
-</script>
 <div  class="se-pre-con">
 	<div class="loadimg">
 		<img  class="imgloadborder" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615987378/Dual_Ball-1s-200px_fsqs5d.gif" />

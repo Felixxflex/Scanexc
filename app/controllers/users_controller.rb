@@ -21,12 +21,12 @@ class UsersController < ApplicationController
    
   end
   
+  
+
   def notenoughpoints
   end
 
-  def congratulations
 
-  end
 
   def deliveryinformation
 

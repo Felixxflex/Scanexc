@@ -8,12 +8,27 @@ class GadgetsController < ApplicationController
         @gadgets = Gadget.all
     end
 
-  
+    def update_points
+      @gadget = Sneaker.find(params[:id])
+      @user = current_user
+      if @user.winpoints ==  @gadget.points || @user.winpoints >=  @gadget.points
+        @user.winpoints -=  @gadget.points 
+     
+        if @user.save
+          redirect_to congratulations_path(@user) 
+        else
+          render :edit
+        end
+      else
+        redirect_to notenoughpoints_path(@user)
+      end
+    end
      
     def show
-      
-        
-        
+      @gadget = Gadget.find(params[:id])
+      if @gadget.stock == 0
+        redirect_to gadgets_path(@gadget)
+      end
     end
   
     def new
