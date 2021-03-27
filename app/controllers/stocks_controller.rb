@@ -15,7 +15,7 @@ class StocksController < ApplicationController
   
     def update
     @technologie = Technologie.find(params[:id])
-      @technologie.stock -= 1
+      @technologie.stock -= 1 
       if @technologie.save
         redirect_to deliveryinformation_path(@user)
       else

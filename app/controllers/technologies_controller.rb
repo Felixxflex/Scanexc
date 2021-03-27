@@ -28,9 +28,11 @@ class TechnologiesController < ApplicationController
     end
     
 
+  
+
     def show
       @technologie = Technologie.find(params[:id])
-      if @technologie.stock == 0
+      if @technologie.stock == 0 || @technologie.stock <= 0
         redirect_to technologies_path(@technologie)
       end
     end
