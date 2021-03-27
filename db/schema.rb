@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_191920) do
+ActiveRecord::Schema.define(version: 2021_03_27_104621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2021_03_12_191920) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "businessproducts", force: :cascade do |t|
+    t.string "product_name"
+    t.string "product_sales"
+    t.integer "product_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "product_image", array: true
+  end
+
   create_table "cafeandbars", force: :cascade do |t|
     t.string "business_address"
     t.text "business_description"
@@ -51,6 +60,8 @@ ActiveRecord::Schema.define(version: 2021_03_12_191920) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
+    t.text "promotion_photo", array: true
+    t.string "business_category"
   end
 
   create_table "flats", force: :cascade do |t|
@@ -86,6 +97,8 @@ ActiveRecord::Schema.define(version: 2021_03_12_191920) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
+    t.text "promotion_photo", array: true
+    t.string "business_category"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -111,6 +124,8 @@ ActiveRecord::Schema.define(version: 2021_03_12_191920) do
     t.string "cusine"
     t.string "price"
     t.string "delivery"
+    t.text "promotion_photo", array: true
+    t.string "business_category"
   end
 
   create_table "sneakers", force: :cascade do |t|
@@ -146,6 +161,8 @@ ActiveRecord::Schema.define(version: 2021_03_12_191920) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
+    t.text "promotion_photo", array: true
+    t.string "business_category"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|

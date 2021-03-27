@@ -1,7 +1,9 @@
 class CafeandbarsController < ApplicationController
-    def index
-        @cafeandbars = Cafeandbar.all
-    end
+  def index
+    args = {}
+    args[:business_category] = params[:business_category] if params[:business_category].present?
+    @cafeandbars = Cafeandbar.search "*", where: args, aggs: {business_category: {}}
+  end
   
 
      
@@ -46,6 +48,6 @@ def set_gadget
 end
 
 def gadget_params
-params.require(:cafeandbar).permit(:business_address, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_number, :business_card, :total_scans, :business_image, :business_opening)
+params.require(:cafeandbar).permit(:business_address, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_number, :business_card, :total_scans, :business_image, :business_opening, :business_category)
 end
 end

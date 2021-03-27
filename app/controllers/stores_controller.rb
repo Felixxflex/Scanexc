@@ -1,7 +1,9 @@
 class StoresController < ApplicationController
     before_action :set_store, only: [:show]
     def index
-        @stores = Store.all
+      args = {}
+      args[:business_category] = params[:business_category] if params[:business_category].present?
+      @stores = Store.search "*", where: args, aggs: {business_category: {}}
     end
   
 
@@ -47,6 +49,6 @@ class StoresController < ApplicationController
     end
     
     def store_params
-    params.require(:store).permit(:business_address, :business_title, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening)
+    params.require(:store).permit(:business_address, :business_title, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening, :business_category )
     end
 end
