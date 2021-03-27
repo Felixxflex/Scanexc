@@ -1,23 +1,10 @@
 class RestaurantsController < ApplicationController
 
-    def index
-      @restaurants = Restaurant.all
-      @search = params["search"]
-      if @search.present?
-        @business_title = @search["business_title"]
-        @restaurants = Restaurant.where("business_title ILIKE ?", "%#{@business_title}%")
-      end
-      if params['search']
-        @filter = params['search']['cusines'].concat(params['search']['prices']).concat(params['search']['deliveries']).flatten.reject(&:blank?)
-        @restaurants = Restaurant.all.global_search("#{@filter}")
-      else
-        @restaurants = Restaurant.all
-      end
-      respond_to do |format|
-        format.html
-        format.js
-      end
-    end
+  def index
+    args = {}
+    args[:business_category] = params[:business_category] if params[:business_category].present?
+    @restaurants = Restaurant.search "*", where: args, aggs: {business_category: {}}
+  end
 
     def show
 
@@ -60,6 +47,6 @@ def set_gadget
 end
 
 def gadget_params
-  params.require(:restaurant).permit(:business_address, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery_service, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening, :cusine, :delivery, :price)
+  params.require(:restaurant).permit(:business_address, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery_service, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening, :cusine, :delivery, :price, :business_category)
 end
 end
