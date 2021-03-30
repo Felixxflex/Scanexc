@@ -1,4 +1,5 @@
 class Store < ApplicationRecord
     has_one_attached :business_image
-    searchkick
+    has_many_attached :promotion_photos
+    # searchkick
 end
