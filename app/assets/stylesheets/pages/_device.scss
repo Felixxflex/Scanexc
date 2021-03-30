@@ -88,6 +88,15 @@ label {
     font-family: 'Fredoka One', cursive;
 }
 
+#btnform3 {
+    width: 32rem;
+    font-size: 16px;
+    margin-top: 2rem;
+    height: 4rem;
+    border-radius: 2rem;
+    font-family: 'Fredoka One', cursive;
+}
+
 .editshow {
     display: flex;
     justify-content: center;
@@ -169,8 +178,8 @@ label {
 
 .btn-success {
     color: #fff !important;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #20E0B2;
+    border-color: #20E0B2;
     font-family: 'Fredoka One', cursive;
     font-size: 17px;
     height: 4rem;
@@ -295,7 +304,7 @@ label {
 }
 
 .wrap-login100 {
-    width: 390px;
+    width: 93%;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -308,7 +317,7 @@ label {
 
 .wrap-login1003 {
     margin-top: 2rem;
-    height: 97rem;
+    height: 84rem;
     margin-bottom: 4rem;
     width: 390px;
     background: #fff;
@@ -347,7 +356,7 @@ label {
 
 .wrap-login100 {
     margin-top: 2rem;
-    height: 82rem;
+    height: 74rem;
 }
 
 .newlogoplace {
@@ -370,4 +379,42 @@ label {
 .separator2 {
     font-size: 12px;
     margin-left: 0rem;
+}
+
+//sign in
+button,
+input {
+    overflow: visible;
+    display: flex;
+    width: 33rem;
+    height: 4rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-color: #20E0B2;
+    margin-left: 2rem;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.5rem;
+    line-height: inherit;
+}
+
+.newseperator {
+    display: flex;
+    justify-content: center;
+    width: 33rem !important;
+}
+
+.newgo9 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
 }
