@@ -13,32 +13,15 @@
     fill: currentColor;
 }
 
-.wrapper67 {
-    width: 100%;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    padding: 50px 20px;
-    padding-top: 50px;
-    display: flex;
-    display: flex;
-    margin-top: -4rem;
-    @media screen and (max-width: 768px) {
-        height: auto;
-        min-height: 100vh;
-        padding-top: 50px;
-    }
-}
-
 .profile-card {
     width: 100%;
     min-height: 460px;
     margin: auto;
     box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
     background: #fff;
-    border-radius: 12px;
     max-width: 700px;
     position: relative;
+    margin-bottom: -8rem;
     &.active {
         .profile-card__cnt {
             filter: blur(6px);
@@ -109,7 +92,6 @@
         &__icon {
             display: inline-flex;
             font-size: 27px;
-            margin-right: 10px;
             //color: #6944ff;
         }
     }
@@ -255,7 +237,7 @@
             margin-right: 0;
         }
         &.button--blue {
-            background: linear-gradient(45deg, #1da1f2, #0e71c8);
+            background: linear-gradient(45deg, #20E0B2, #20E0B2);
             box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.4);
             &:hover {
                 box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
@@ -360,61 +342,6 @@
 }
 
 //new search
-.card34 {
-    border: none;
-}
-
-.search34 {
-    width: 100%;
-    margin-bottom: auto;
-    margin-top: 20px;
-    height: 50px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px
-}
-
-.search-input {
-    color: white;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    margin-top: 5px;
-    caret-color: transparent;
-    line-height: 20px;
-    transition: width 0.4s linear
-}
-
-.search34 .search-input {
-    padding: 0 10px;
-    width: 100%;
-    caret-color: #536bf6;
-    font-size: 19px;
-    font-weight: 300;
-    color: black;
-    transition: width 0.4s linear
-}
-
-.search-icon {
-    height: 34px;
-    width: 34px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: #536bf6;
-    font-size: 10px;
-    bottom: 30px;
-    position: relative;
-    border-radius: 5px
-}
-
-.search-icon:hover {
-    color: #fff !important
-}
-
 a:link {
     text-decoration: none
 }
@@ -487,7 +414,7 @@ a:link {
 }
 
 .profile-card__button.button--blue {
-    background: linear-gradient(45deg, #1da1f2, #0e71c8);
+    background: linear-gradient(45deg, #1ccaa1, #20E0B2);
     box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.4);
     margin-bottom: 1.5rem;
     width: 37rem;
@@ -503,4 +430,27 @@ a:link {
 .newsearchfunc {
     display: flex;
     justify-content: center;
+}
+
+.newcarouselgo {
+    width: 32rem;
+    height: 22rem;
+}
+
+//show carousel
+.container12 {
+    margin-top: -1rem;
+}
+
+//new
+.searchform {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.svg-inline--fa.fa-w-16 {
+    width: 2rem;
+    height: 2rem;
+    color: #20E0B2;
 }

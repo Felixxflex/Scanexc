@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_27_104621) do
+ActiveRecord::Schema.define(version: 2021_03_30_074616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2021_03_27_104621) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
-    t.text "promotion_photo", array: true
     t.string "business_category"
+    t.text "promotion_photos", default: [], array: true
   end
 
   create_table "flats", force: :cascade do |t|
@@ -97,8 +97,8 @@ ActiveRecord::Schema.define(version: 2021_03_27_104621) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
-    t.text "promotion_photo", array: true
     t.string "business_category"
+    t.text "promotion_photos", default: [], array: true
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -124,8 +124,8 @@ ActiveRecord::Schema.define(version: 2021_03_27_104621) do
     t.string "cusine"
     t.string "price"
     t.string "delivery"
-    t.text "promotion_photo", array: true
     t.string "business_category"
+    t.text "promotion_photos", default: [], array: true
   end
 
   create_table "sneakers", force: :cascade do |t|
@@ -161,8 +161,8 @@ ActiveRecord::Schema.define(version: 2021_03_27_104621) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "business_title"
     t.integer "total_scans"
-    t.text "promotion_photo", array: true
     t.string "business_category"
+    t.text "promotion_photos", default: [], array: true
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|

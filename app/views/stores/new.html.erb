@@ -8,12 +8,16 @@
         <%= f.input :business_address %>
         <%= f.label :business_image, class: 'text-white' %>
         <%= f.input :business_image, as: :file %>
+        <%= f.label :promotion_photos, class: 'text-white' %>
+        <%= f.file_field :promotion_photos, multiple: true %>
         <%= f.label :business_description, class: 'text-white' %>
         <%= f.text_field :business_description %>
         <%= f.label :business_rating, class: 'text-white' %>
         <%= f.input :business_rating %>
         <%= f.label :business_founding, class: 'text-white' %>
         <%= f.input :business_founding %>
+        <%= f.label :business_category, class: 'text-white' %>
+        <%= f.input :business_category %>
         <%= f.label :business_stores, class: 'text-white' %>
         <%= f.input :business_stores %>
         <%= f.label :business_website, class: 'text-white' %>
@@ -36,5 +40,3 @@
 
 </div>
 
-
- 
