@@ -5,9 +5,9 @@
         <form action="" class="searchform">
           <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
             <div class="input-group">
-              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              <input type="search" placeholder="Search..." aria-describedby="button-addon1" class="form-control border-0 bg-light">
               <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search" id="newsearchgo"></i></button>
               </div>
             </div>
           </div>
@@ -35,14 +35,14 @@
             <div class="card23 p-3" style="border-radius: 1.25rem !important;">
                 <div class="d-flex flex-row mb-3">
                 <% if store.business_image.attached? %>
-                <%= cl_image_tag store.business_image.key, class: "profile-pic2" %>
+                <%= cl_image_tag store.business_image.key, cloud_name: "dn6wh4u2h", class: "profile-pic2" %>
                 <% end %>
                 <%= link_to store_path(store) do %> 
                 <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=store.business_title%></span><span class="text-black-50">Opening : <%=store.business_opening%></span><span class="ratings"></span></div>
                 </div>
                 -------------------------------------------------------------------------------
                 <% if store.promotion_photos.attached? %>
-                 <%= cl_image_tag store.promotion_photos, crop: :fill, class: "indexpics"%> 
+                 <%= cl_image_tag store.promotion_photos, cloud_name: "dn6wh4u2h", crop: :fill, class: "indexpics"%> 
                 <% end %>
                 <%end%>
             </div>

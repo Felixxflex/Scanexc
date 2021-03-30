@@ -1,8 +1,9 @@
 class CafeandbarsController < ApplicationController
   def index
-    args = {}
-    args[:business_category] = params[:business_category] if params[:business_category].present?
-    @cafeandbars = Cafeandbar.search "*", where: args, aggs: {business_category: {}}
+    @cafeandbars = Cafeandbar.all
+    # args = {}
+    # args[:business_category] = params[:business_category] if params[:business_category].present?
+    # @cafeandbars = Cafeandbar.search "*", where: args, aggs: {business_category: {}}
   end
   
 

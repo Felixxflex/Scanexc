@@ -1,8 +1,9 @@
 class LocalsController < ApplicationController
   def index
-    args = {}
-    args[:business_category] = params[:business_category] if params[:business_category].present?
-    @locals = Local.search "*", where: args, aggs: {business_category: {}}
+    @locals = Local.all
+    # args = {}
+    # args[:business_category] = params[:business_category] if params[:business_category].present?
+    # @locals = Local.search "*", where: args, aggs: {business_category: {}}
   end
   
 
