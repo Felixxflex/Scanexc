@@ -97,6 +97,19 @@ label {
     font-family: 'Fredoka One', cursive;
 }
 
+#btnform4 {
+    width: 32rem;
+    color: white;
+    font-size: 16px;
+    background-color: #20E0B2;
+    height: 4.5rem;
+    border-radius: 2rem;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: center;
+    margin-top: -13rem;
+}
+
 .editshow {
     display: flex;
     justify-content: center;
@@ -356,7 +369,7 @@ label {
 
 .wrap-login100 {
     margin-top: 2rem;
-    height: 74rem;
+    height: 77rem;
 }
 
 .newlogoplace {

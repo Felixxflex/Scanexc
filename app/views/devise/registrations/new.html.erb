@@ -19,6 +19,7 @@
         type: "text",
         placeholder: "Username"
         %>
+        
          <%= f.input :full_name,
         required: true,
         autofocus: true,
@@ -34,6 +35,7 @@
         type: "text",
         placeholder: "Email"
         %>
+    
         <%= f.input :password,
         required: true,
         # hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -42,6 +44,7 @@
         type: "text",
         placeholder: "Password"
         %>
+     
         <%= f.input :password_confirmation,
         required: true,
         input_html: { autocomplete: "new-password" },
@@ -49,6 +52,7 @@
         type: "text",
         placeholder: "Confirm Password"
         %>
+     
        <%# <div class="field">
         <%= f.input :photo, label: 'Avatar', as: :file %> 
        <div class="form-actions mt-2">
