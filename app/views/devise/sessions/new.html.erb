@@ -8,7 +8,7 @@
       </div>
   <div class="yessir">
       <%= simple_form_for(resource, as: resource_name, remote:true, url: session_path(resource_name)) do |f| %>
-
+      <%= f.error_notification %>
       
       <div class="form-inputs">
        <%= f.input :username,
@@ -16,20 +16,20 @@
         autofocus: true,
         placeholder: "Username"
         %>
-        
+      
         <%= f.input :email,
         required: true,
         autofocus: true,
         input_html: { autocomplete: "email" },
         placeholder: "Email"
         %>
-
-
+      
         <%= f.input :password,
         required: true,
         input_html: { autocomplete: "current-password" },
         placeholder: "Password" 
         %>
+       
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       
@@ -49,11 +49,92 @@
       <div class="mokko">
       <%= render "devise/shared/signup_btn", id:"btnform2" %>
     </div>
+   
 <% end %>
   </div>
   </div>
   </div>
+<div class="newmodalexplain">
+<div class="container d-flex justify-content-center mt-100">
+    <div class="row">
+        <div class="col-md-6"> <button id="btnform4" data-toggle="modal" data-target="#myModal">What`s ScanExc?</button> </div>
+    </div>
 </div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+       
+           
+
+
+<div class="carouselcont">
+  <div class="container234">
+    <div id="magicCarousel" class="carousel slide my-5" data-ride="carousel">
+      
+<!--    Carousel Indicators    -->
+      <ol class="carousel-indicators">
+        <li data-target="#magicCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#magicCarousel" data-slide-to="1"></li>
+        <li data-target="#magicCarousel" data-slide-to="2"></li>
+        <li data-target="#magicCarousel" data-slide-to="3"></li>
+      </ol>
+      
+<!--    Carousel Slider    -->
+      <div class="carousel-inner45" role="listbox">
+        <div class="carousel-item active">
+          <img src="//unsplash.it/g/700/450" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Sign Up</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat dolore.</p>
+          </div> 
+        </div>
+        
+        <div class="carousel-item">
+          <img src="https://picsum.photos/700/450" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Search Stores</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div> 
+        </div>
+        
+        <div class="carousel-item">
+          <img src="//unsplash.it/g/700/450" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Simple Scan</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div> 
+        </div>
+        
+        <div class="carousel-item">
+          <img src="https://picsum.photos/700/450" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Win great Items</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div> 
+        </div>
+        
+<!--     Carousel Controls     -->
+        <a href="#magicCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+        
+        </a>
+        <a href="#magicCarousel" class="carousel-control-next" role="button" data-slide="next">
+        
+        </a>
+        
+      </div>
+    </div>
+  </div>
+            <div class="card-title">
+                <p> </p>
+            </div>
+            <div class="card-text">
+                <p> <br> </p>
+            </div> 
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
 </body>
 </html>
 <div  class="se-pre-con">
@@ -61,3 +142,8 @@
 		<img  class="imgloadborder" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615987378/Dual_Ball-1s-200px_fsqs5d.gif" />
 	</div>
 </div>
+
+
+ 
+
+
