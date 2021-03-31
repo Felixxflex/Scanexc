@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     # Create the user from params
     @user = User.new(user_params)
-    if @user.save, notice: "Please confirm the Email we send you!"
+    if @user.save
       Deliver the signup email
       UserNotifierMailer.send_signup_email(@user).deliver
       redirect_to(@user, :notice => 'User created')
