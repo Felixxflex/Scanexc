@@ -1,3 +1,5 @@
+<html style='background-color: #20E0B2 !important; overflow: auto !important;'>
+<body style='background-color: #20E0B2 !important; overflow: auto !important;'>
 <h2 class="newcardtitle187">Change your password</h2>
 <div class="new-user23">
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -23,6 +25,8 @@
     <%= f.button :submit, "Change my password", class: "btn btn-success btn-block" %>
   </div>
   </div>
+  </body>
+  </html>
 <% end %>
 
 
