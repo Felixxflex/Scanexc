@@ -24,7 +24,7 @@ gem 'mini_magick'
 gem 'mapbox-gl-rails'
 gem 'social-share-button'
 gem 'sendgrid-ruby'
-gem 'searchkick'
+gem 'searchkick', '~> 4.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
