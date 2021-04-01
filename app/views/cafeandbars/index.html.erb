@@ -2,6 +2,15 @@
 <body style='background-color: #20E0B2 !important; overflow: auto !important;'>
 
 
+<div class="fakebody">
+<div class="search__container">
+ 
+    <input class="search__input" type="text" placeholder="Search">
+</div>
+</div>
+
+
+
     <% @cafeandbars.aggs["business_category"]["buckets"].sort_by{ |b| b["key"] }.reverse.each do |bucket| %>
       <div class="newsearchfunc">
         <% if params[:business_category] == bucket["key"].to_s %>
