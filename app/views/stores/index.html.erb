@@ -3,7 +3,12 @@
 
 
 
-
+<div class="fakebody">
+<div class="search__container">
+ 
+    <input class="search__input" type="text" placeholder="Search">
+</div>
+</div>
 
 
     <%# <% @stores.aggs["business_category"]["buckets"].sort_by{ |b| b["key"] }.reverse.each do |bucket| %>
@@ -31,7 +36,7 @@
                 <%= link_to store_path(store) do %> 
                 <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=store.business_title%></span><span class="text-black-50">CLOSED</span><span class="ratings"></span></div>
                 </div>
-                -------------------------------------------------------------------------------------------------------------------------------------------
+                ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                 <% if store.promotion_photos.attached? %>
                  <%= cl_image_tag store.promotion_photos, cloud_name: "dn6wh4u2h", crop: :fill, class: "indexpics"%> 
                 <% end %>
