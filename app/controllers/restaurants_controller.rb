@@ -1,13 +1,14 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all
-
-    # args = {}
-    # args[:business_category] = params[:business_category] if params[:business_category].present?
-    # @restaurants = Restaurant.search "*", where: args, aggs: {business_category: {}}
+    if params[:search_by_business_title_and_business_description].nil? || params[:search_by_business_title_and_business_description].empty?
+      @restaurants = Restaurant.all.order(name: :desc)
+    else
+      @restaurants = Restaurant.search_by_title_and_location(params[:search_by_business_title_and_business_description]).order(name: :desc)
+    end
+      @q = Restaurant.ransack(params[:q])
+      @restaurants = @q.result
   end
-
     def show
 
     end

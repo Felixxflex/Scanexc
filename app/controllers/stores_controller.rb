@@ -1,11 +1,15 @@
 class StoresController < ApplicationController
    
   before_action :set_store, only: [:show]
+  
   def index
-    @stores = Store.all
-    # args = {}
-    # args[:business_category] = params[:business_category] if params[:business_category].present?
-    # @stores = Store.search "*", where: args, aggs: {business_category: {}}
+    if params[:search_by_business_title_and_business_description].nil? || params[:search_by_business_title_and_business_description].empty?
+      @stores = Store.all.order(name: :desc)
+    else
+      @stores = Store.search_by_title_and_location(params[:search_by_business_title_and_business_description]).order(name: :desc)
+    end
+      @q = Store.ransack(params[:q])
+      @stores = @q.result
   end
 
 

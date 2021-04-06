@@ -1,9 +1,12 @@
 class LocalsController < ApplicationController
   def index
-    @locals = Local.all
-    # args = {}
-    # args[:business_category] = params[:business_category] if params[:business_category].present?
-    # @locals = Local.search "*", where: args, aggs: {business_category: {}}
+    if params[:search_by_business_title_and_business_description].nil? || params[:search_by_business_title_and_business_description].empty?
+      @locals = Local.all.order(name: :desc)
+    else
+      @locals = Local.search_by_title_and_location(params[:search_by_business_title_and_business_description]).order(name: :desc)
+    end
+      @q = Local.ransack(params[:q])
+      @locals = @q.result
   end
   
 
@@ -20,7 +23,7 @@ class LocalsController < ApplicationController
     
     def create
     
-    @local = Local.new(store_params)
+    @local = Local.new(local_params)
       
       if @local.save
         redirect_to local_path(@local)
@@ -44,11 +47,11 @@ class LocalsController < ApplicationController
   end
     private
 
-def set_gadget
-@local = Gadget.find(params[:id])   
+def set_local
+@local = Local.find(params[:id])   
 end
 
-def gadget_params
-params.require(:local).permit(:business_address, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_number, :business_card, :total_scans, :business_image, :business_opening, :business_category)
+def local_params
+params.require(:local).permit(:business_address, :business_title, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening, :business_category, promotion_photos: [])
 end
 end

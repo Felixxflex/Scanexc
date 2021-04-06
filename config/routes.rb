@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :sneakers
   resources :gadgets
   resources :businesses
-
   resources :locals
   resources :restaurants
   resources :stores
