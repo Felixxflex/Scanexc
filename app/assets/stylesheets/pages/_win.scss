@@ -160,7 +160,10 @@
     background: linear-gradient(#00BCF9, #027AF6);
     border-radius: 25px;
     color: #fff;
-    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    justify-content: 17px;
+    height: 7rem;
     letter-spacing: 1px;
     transition: all 0.2s ease;
 }
@@ -273,4 +276,19 @@
 
 .acongrats {
     margin-left: 3rem;
+}
+
+//submit form
+.registration-form .create-account {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 5.8rem !important;
 }
