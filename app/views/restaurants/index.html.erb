@@ -5,11 +5,14 @@
 
 
 
-<div class="fakebody">
-<div class="search__container">
- 
-    <input class="search__input" type="text" placeholder="Search">
-</div>
+<div class="searchfunction">
+ <%= search_form_for @q do |f| %>
+  <div class="col">
+    <%= f.text_field :business_title_cont, class: 'form-control', placeholder: "Search..." %>
+    <%= link_to "Clear", restaurants_path, class: "btn btn-danger btn-block", id: 'locogobtn', remote: :true %>
+
+  </div>
+<%end%>
 </div>
   <%# <%@restaurants.each do |restaurant| %> 
     <%# <h3><%= restaurant.business_title</h3> %>
@@ -23,16 +26,6 @@
   <%# <% end %> 
 
 
-    <% @restaurants.aggs["business_category"]["buckets"].sort_by{ |b| b["key"] }.reverse.each do |bucket| %>
-      <div class="newsearchfunc">
-        <% if params[:business_category] == bucket["key"].to_s %>
-          <strong><%= link_to bucket["key"], request.params.except(:business_category) %></strong>
-        <% else %>
-          <%= link_to bucket["key"], request.params.merge(business_category: bucket["key"]) %>
-        <% end %>
-        (<%= bucket["doc_count"] %>)
-      </div>
-    <% end %>
 
 <%# <%= simple_form_for :search, url: restaurants_path, method: "GET", html: { class: 'form-inline' } do |f| %> 
   <%# <%= f.input :name, input_html: {value: ""} %> 
@@ -81,16 +74,6 @@
 <%end%>
 
 
-<script type="text/javascript">
-  var checkBoxes = document.querySelectorAll(".form-check-input");
-  var form = document.querySelector('form');
-
-  for (const check of checkBoxes) {
-  check.addEventListener( 'change', function() {
-    Rails.fire(form, 'submit');
-  });
-  }
-</script>
 
 </body>
 </html>

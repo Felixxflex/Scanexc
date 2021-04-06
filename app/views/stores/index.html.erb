@@ -3,13 +3,16 @@
 
 
 
-<div class="fakebody">
-<div class="search__container">
- 
-    <input class="search__input" type="text" placeholder="Search">
-</div>
-</div>
 
+<div class="searchfunction">
+ <%= search_form_for @q do |f| %>
+  <div class="col">
+    <%= f.text_field :business_title_cont, class: 'form-control', placeholder: "Store..." %>
+    <%= link_to "Clear", stores_path, class: "btn btn-danger btn-block", id: 'locogobtn', remote: :true %>
+
+  </div>
+<%end%>
+</div>
 
     <%# <% @stores.aggs["business_category"]["buckets"].sort_by{ |b| b["key"] }.reverse.each do |bucket| %>
      <%# <div class="newsearchfunc"> %>

@@ -1,9 +1,12 @@
 class CafeandbarsController < ApplicationController
   def index
-    @cafeandbars = Cafeandbar.all
-    # args = {}
-    # args[:business_category] = params[:business_category] if params[:business_category].present?
-    # @cafeandbars = Cafeandbar.search "*", where: args, aggs: {business_category: {}}
+    if params[:search_by_business_title_and_business_description].nil? || params[:search_by_business_title_and_business_description].empty?
+      @cafeandbars = Cafeandbar.all.order(name: :desc)
+    else
+      @cafeandbars = Cafeandbar.search_by_title_and_location(params[:search_by_business_title_and_business_description]).order(name: :desc)
+    end
+      @q = Cafeandbar.ransack(params[:q])
+      @cafeandbars = @q.result
   end
   
 
