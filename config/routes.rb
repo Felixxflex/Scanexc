@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   get "/path/users/deliveryinformation", to: "users#deliveryinformation", as: "deliveryinformation"
   get "/path/users/thankyou", to: "users#thankyou", as: "thankyou"
   get "/path/technologiesnew/page", to: "technologies#new", as: "technologiesnew"
-  get "/path/chart", to: "pages#chart", as: "pagesshare"
   get "/path/questions", to: "pages#questions", as: "pagesquestions"
   get "/path/users/show", to: "users#show", as: "usersshow"
   resources :users, only: [:show, :edit, :update]
@@ -36,6 +35,12 @@ Rails.application.routes.draw do
 
 
   get "/path/users/newpoints", to: "users#newpoints", as: "usersnewpoints"
+
+  get "/path/charts", to: "charts#chart", as: "businesschart"
+  get "/path/charts/businesschartone", to: "charts#businesschartone", as: "businesschartone"
+  get "/path/charts/businesscharttwo", to: "charts#businesscharttwo", as: "businesscharttwo"
+  get "/path/charts/businesscharttree", to: "charts#businesscharttree", as: "businesscharttree"
+  get "/path/charts/businesschartfour", to: "charts#businesschartfour", as: "businesschartfour"
 
 
   # get "/path/users/removepoints", to: "winpoints#update_points", as: :user_remove_points
