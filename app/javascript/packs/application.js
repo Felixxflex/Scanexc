@@ -34,6 +34,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { startUserTimer } from '../plugins/userTimer';
 import { updateUserPoints } from '../plugins/updateUserPoints';
 import { newPointsAnimation } from '../plugins/newPointsAnimation';
+import { sexyHomeRotation } from '../plugins/sexyHomeRotation';
+import { littleParticleAnimation } from '../plugins/littleParticleAnimation';
 
 
 
@@ -46,6 +48,8 @@ document.addEventListener('turbolinks:load', () => {
         startUserTimer();
         updateUserPoints();
         newPointsAnimation();
+        sexyHomeRotation();
+        littleParticleAnimation();
     }
     // Call your functions here, e.g:
     // initSelect2();
