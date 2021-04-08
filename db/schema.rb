@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_30_151935) do
+ActiveRecord::Schema.define(version: 2021_04_08_091553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -163,6 +163,15 @@ ActiveRecord::Schema.define(version: 2021_03_30_151935) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "business_founding"
     t.string "business_rating"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "mondaytime"
+    t.string "thuesdaytime"
+    t.string "wednesdaytime"
+    t.string "thursdaytime"
+    t.string "fridaytime"
+    t.string "saturdaytime"
+    t.string "sundaytime"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|

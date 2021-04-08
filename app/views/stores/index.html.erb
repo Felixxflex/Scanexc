@@ -2,26 +2,17 @@
 <body style='background-color: #20E0B2 !important; overflow: auto !important;'>
 
 
-
-
 <div class="searchfunction">
  <%= search_form_for @q do |f| %>
   <div class="col">
-    <%= f.text_field :business_title_cont, class: 'form-control', placeholder: "Store..." %>
+    <%= f.text_field :business_title_cont, class: 'form-control', placeholder: "Search..." %>
     <%= link_to "Clear", stores_path, class: "btn btn-danger btn-block", id: 'locogobtn', remote: :true %>
+
+  </div>
 <%end%>
 </div>
 
-    <%# <% @stores.aggs["business_category"]["buckets"].sort_by{ |b| b["key"] }.reverse.each do |bucket| %>
-     <%# <div class="newsearchfunc"> %>
-        <%# <% if params[:business_category] == bucket["key"].to_s %>
-          <%# <strong><%= link_to bucket["key"], request.params.except(:business_category) %>
-       <%# <% else %> 
-         <%# <%= link_to bucket["key"], request.params.merge(business_category: bucket["key"]) %>
-        <%# <% end %>
-        <%# (<%= bucket["doc_count"] %>
-      <%# </div> %>
-   <%# <% end %> 
+
 
 
 
@@ -35,7 +26,23 @@
                 <%= cl_image_tag store.business_image.key, cloud_name: "dn6wh4u2h", class: "profile-pic2" %>
                 <% end %>
                 <%= link_to store_path(store) do %> 
-                <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=store.business_title%></span><span class="text-black-50">CLOSED</span><span class="ratings"></span></div>
+                <div class="d-flex flex-column ml-2"><span class="cooltitle"><%=store.business_title%></span><span class="text-black-50">
+                <% if Date.today.monday? %>
+                <%=store.mondaytime%>
+                <% elsif Date.today.tuesday?%>
+                <%=store.thuesdaytime%>
+                <% elsif Date.today.wednesday?%>
+                <%=store.wednesdaytime%>
+                <% elsif Date.today.thursday?%>
+                <%=store.thursdaytime%>
+                <% elsif Date.today.friday?%>
+                <%=store.fridaytime%>
+                <% elsif Date.today.saturday?%>
+                <%=store.saturdaytime%>
+                <% elsif Date.today.sunday?%>
+                <%=store.fridaytime%>
+                <%end%>
+                </span><span class="ratings"></span></div>
                 </div>
                 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                 <% if store.promotion_photos.attached? %>

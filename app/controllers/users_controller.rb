@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   def thankyou
     
   end
-  def addpoints
+  def xdersgdtzshezdtfgetdgetdhfjdzrgsgw
       
   end
 
