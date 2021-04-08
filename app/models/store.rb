@@ -10,8 +10,7 @@ class Store < ApplicationRecord
     }
 
 
-    geocoded_by :business_address
-    after_validation :geocode, :if => :business_address_changed?
+   
     # def search_books
     #     stores = stores.where(["business_category LIKE ?",business_category]) if category.present?
     #     return stores
