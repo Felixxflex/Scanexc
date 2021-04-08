@@ -57,6 +57,6 @@ end
   end
   
   def store_params
-  params.require(:store).permit(:business_address, :business_title, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening, :business_category, promotion_photos: [] )
+  params.require(:store).permit(:business_address, :business_title, :business_description, :business_rating, :business_founding, :business_stores, :business_website, :business_delivery, :business_number, :business_card, :total_scans, :business_image, :business_opening, :business_category, :mondaytime, :thuesdaytime, :wednesdaytime, :thursdaytime, :fridaytime, :saturdaytime, :sundaytime, promotion_photos: [] )
   end
 end

@@ -48,5 +48,5 @@ Rails.application.routes.draw do
 
   get "/path/technologie/update_stock", to: "stocks#update", as: :remove_stock
 
-  get "/path/users/addpoints", to: "winpoints#update", as: :user_add_points
+  get "/path/users/xdersgdtzshezdtfgetdgetdhfjdzrgsgw", to: "winpoints#update", as: :user_add_points
 end
