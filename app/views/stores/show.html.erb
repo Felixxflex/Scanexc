@@ -84,8 +84,24 @@
         </div>
 
         <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title"><%=@store.business_opening%></div>
-          <div class="profile-card-inf__txt">Openings</div>
+          <div class="profile-card-inf__title">
+          <% if Date.today.monday? %>
+          <%=@store.mondaytime%>
+          <% elsif Date.today.tuesday?%>
+          <%=@store.thuesdaytime%>
+          <% elsif Date.today.wednesday?%>
+          <%=@store.wednesdaytime%>
+          <% elsif Date.today.thursday?%>
+          <%=@store.thursdaytime%>
+          <% elsif Date.today.friday?%>
+          <%=@store.fridaytime%>
+          <% elsif Date.today.saturday?%>
+          <%=@store.saturdaytime%>
+          <% elsif Date.today.sunday?%>
+          <%=@store.fridaytime%>
+          <%end%>
+          </div>
+          <div class="profile-card-inf__txt">Hours Today</div>
         </div>
 
         <div class="profile-card-inf__item">

@@ -6,10 +6,13 @@
  <%= search_form_for @q do |f| %>
   <div class="col">
     <%= f.text_field :business_title_cont, class: 'form-control', placeholder: "Search..." %>
-    <%= link_to "Clear", stores_path, class: "btn btn-danger btn-block", id: 'locogobtn', remote: :true %>
 
   </div>
+</div>
 <%end%>
+
+<div class="clearbtn">
+ <a href="/stores", class="btn btn-success btn-block", id= 'locogobtn', remote: :true>Clear</a>
 </div>
 
 
