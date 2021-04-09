@@ -7,7 +7,7 @@
       </div>
   <div class="yessir">
       <%= simple_form_for(resource, as: resource_name, remote: true, url: registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
+      <%= devise_error_messages! %>
 
       
       
@@ -76,3 +76,4 @@
 		<img  class="imgloadborder" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1615987378/Dual_Ball-1s-200px_fsqs5d.gif" />
 	</div>
 </div>
+

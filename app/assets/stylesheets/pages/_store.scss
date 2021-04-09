@@ -106,7 +106,7 @@
             min-width: 150px;
             @media screen and (max-width: 768px) {
                 padding: 10px 20px;
-                min-width: 120px;
+                min-width: 175px;
             }
         }
         &__title {
@@ -549,5 +549,14 @@ a:link {
 #locogobtn {
     margin-left: 0%;
     border-radius: 1rem;
+    border-color: #48cae4;
     color: white !important;
+    background-color: #48cae4;
+    width: 32rem;
+    margin-left: 1rem;
+}
+
+.clearbtn {
+    display: flex;
+    justify-content: center;
 }
