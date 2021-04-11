@@ -1,5 +1,5 @@
 body {
-    background-color: #020202;
+    background-color: whitesmoke;
 }
 
 *,
@@ -159,17 +159,16 @@ $white: #FFFFFF;
 
 /**/
 
-.is-active {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 188px;
-    height: 188px;
-    background: #1ccaa1;
-    transition: 200ms;
-    border-radius: 20px;
-}
-
+// .is-active {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 188px;
+//     height: 188px;
+//     background: #1ccaa1;
+//     transition: 200ms;
+//     border-radius: 20px;
+// }
 @keyframes icon {
     0% {
         transform: rotateZ(-10deg);
