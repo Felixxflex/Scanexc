@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: #5EF8D2;
 }
 
 *,
@@ -90,8 +90,9 @@ $white: #FFFFFF;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    width: 100%;
+    width: 44rem;
     height: 50px;
+    margin-left: 2rem;
     padding: 10px 0px;
     margin-bottom: 10px;
     &__icon1 {

@@ -19,7 +19,7 @@
             </div>
         </div> <%= cl_image_tag technologie.photo.key, :cloud_name => 'dn6wh4u2h', crop: :fill, style: 'background-image', class: "imglo"%>
         <div class="card-body text-center mx-auto">
-        <%= link_to technology_path(technologie) do %> 
+        <%= link_to technology_path(technologie), class: "newtech" do %> 
             <h5 class="card-title"><%=technologie.title%></h5>
             <p class="card-text"><%=technologie.description%></p>
             <p class="card-text">
