@@ -1,202 +1,67 @@
-
-
-<div class="scene">
-  <svg class="circle" viewBox="0 0 400 400">
-    <path class="half" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" d="M1,200 a199,199 0 0,1 398,0"/>
-    <path class="half" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" d="M399,200 a199,199 0 0,1 -398,0"/>
-    <path class="active-nav" stroke="#fff" stroke-width="2" fill="none" d="M200,1 a199,199 0 0,1 0,398 a199,199 0 0,1 0,-398"/>
-  </svg>
-  <div class="rotater">
-    <div class="rotater--line left"></div>
-    <div class="rotater--line right"></div>
-  </div>
-  <div class="nav-elems">
-  <div class="h1behave">
-    <h1 class="heading invisible"><span class="numbers">
-    <a href="/path/businesses/business"><span><i class="fas fa-store-alt" id="locospan2"></i></span></a>
-    <a href="/path/charts"><span><i class="far fa-chart-bar" id="locospan1"></i></span></a>
-    <a href="/path/wins/windirection"><span><i class="fa fa-trophy" id="locospan3"></i></span></a>
-    <a href="/path/users/show"><span><i class="fa fa-user" id="locospan4"></i></span></a>
-    <a href="/flats"><span><i class="fa fa-map-marked-alt" id="locospan5"></i></span></a>
-    <a href="/path/questions"><span><i class="fa fa-question" id="locospan6"></i></span></a>
-
-    
-    </span></h1>
-    </div>
-    <div data-page="1" class="nav-el nav-el-1"></div>
-    <div data-page="2" class="nav-el nav-el-2"></div>
-    <div data-page="3" class="nav-el nav-el-3"></div>
-    <div data-page="4" class="nav-el nav-el-4"></div>
-    <div data-page="5" class="nav-el nav-el-5"></div>
-    <div data-page="6" class="nav-el nav-el-6"></div>
-  </div>
-  <div class="pages removed">
-    <div class="page page-1">
-    </div>
-    <div class="page page-2"></div>
-    <div class="page page-3"></div>
-    <div class="page page-4"></div>
-    <div class="page page-5"></div>
-    <div class="page page-6"></div>
+<div class="navbody">
+<div class="main">
+  <div class="bar"> 
   
-    </div>
+  <h2 class="bar__icon2" id="signoutid"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></h2>
+  <img class="bar__icon1" src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1618156032/sssss_wyswmm.png"/>
+  
   </div>
-
-
+  <div class="menu">
+    <a href="/path/businesses/business">
+    <div class="menu__item" id="0-0"> <img class="menu__icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5v%0D%0AbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0x%0D%0AIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGZp%0D%0AbGw9IiNmZmZmZmYiIGlkPSJzdmdfMSIgZD0ibTIwLDQwbDAsLTEybDgsMGwwLDEybDEwLDBsMCwt%0D%0AMTZsNiwwbC0yMCwtMThsLTIwLDE4bDYsMGwwLDE2bDEwLDB6Ii8+CiA8L2c+Cjwvc3ZnPg=="/>
+      <div class="menu__content"><span class="menu__span">BUSINESS</span><span class="menu__span">BUSINESS</span></div>
+    </div>
+    </a>
+    <a href="/path/charts">
+    <div class="menu__item" id="1-0"><img class="menu__icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5v%0D%0AbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0x%0D%0AIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlk%0D%0APSJzdmdfMSIgZmlsbD0ibm9uZSIgZD0ibTAsMGw0OCwwbDAsNDhsLTQ4LDBsMCwtNDh6Ii8+CiAg%0D%0APHBhdGggZmlsbD0iI2ZmZmZmZiIgaWQ9InN2Z18yIiBkPSJtMjAsNDBsOCwwbDAsLTMybC04LDBs%0D%0AMCwzMnptLTEyLDBsOCwwbDAsLTE2bC04LDBsMCwxNnptMjQsLTIybDAsMjJsOCwwbDAsLTIybC04%0D%0ALDB6Ii8+CiA8L2c+Cjwvc3ZnPg=="/>
+      <div class="menu__content"><span class="menu__span">RANKING</span><span class="menu__span">RANKING</span></div>
+    </div>
+    </a>
+    <a href="/path/wins/windirection">
+    <div class="menu__item" id="0-1"><img class="menu__icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5v%0D%0AbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0x%0D%0AIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlk%0D%0APSJzdmdfMSIgZmlsbD0ibm9uZSIgZD0ibTAsMGw0OCwwbDAsNDhsLTQ4LDBsMCwtNDh6Ii8+CiAg%0D%0APHBhdGggZmlsbD0iI2ZmZmZmZiIgaWQ9InN2Z18yIiBkPSJtMjAsNDBsOCwwbDAsLTMybC04LDBs%0D%0AMCwzMnptLTEyLDBsOCwwbDAsLTE2bC04LDBsMCwxNnptMjQsLTIybDAsMjJsOCwwbDAsLTIybC04%0D%0ALDB6Ii8+CiA8L2c+Cjwvc3ZnPg=="/>
+      <div class="menu__content"><span class="menu__span">DROP SHOP</span><span class="menu__span">DROP SHOP</span></div>
+    </div>
+    </a>
+    <a href="/path/users/show">
+    <div class="menu__item" id="1-1"><img class="menu__icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5v%0D%0AbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0x%0D%0AIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlk%0D%0APSJzdmdfMSIgZmlsbD0ibm9uZSIgZD0ibTAsMGw0OCwwbDAsNDhsLTQ4LDBsMCwtNDh6Ii8+CiAg%0D%0APHBhdGggZmlsbD0iI2ZmZmZmZiIgaWQ9InN2Z18yIiBkPSJtNDIsMzhsMCwtMjhjMCwtMi4yMSAt%0D%0AMS43OSwtNCAtNCwtNGwtMjgsMGMtMi4yMSwwIC00LDEuNzkgLTQsNGwwLDI4YzAsMi4yMSAxLjc5%0D%0ALDQgNCw0bDI4LDBjMi4yMSwwIDQsLTEuNzkgNCwtNHptLTI1LC0xMWw1LDYuMDFsNywtOS4wMWw5%0D%0ALDEybC0yOCwwbDcsLTl6Ii8+CiA8L2c+Cjwvc3ZnPg=="/>
+      <div class="menu__content"><span class="menu__span">PROFILE</span><span class="menu__span">PROFILE</span></div>
+    </div>
+    </a>
+    <a href="">
+    <div class="menu__item" id="0-2"><img class="menu__icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5v%0D%0AbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0x%0D%0AIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGZp%0D%0AbGw9IiNmZmZmZmYiIGlkPSJzdmdfMSIgZD0ibTQuMDIsNDJsNDEuOTgsLTE4bC00MS45OCwtMThs%0D%0ALTAuMDIsMTRsMzAsNGwtMzAsNGwwLjAyLDE0eiIvPgogPC9nPgo8L3N2Zz4="/>
+      <div class="menu__content"><span class="menu__span">SHARE</span><span class="menu__span">SHARE</span></div>
+    </div>
+    </a>
+    <a href="/path/questions">
+    <div class="menu__item" id="1-2"><img class="menu__icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5v%0D%0AbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0x%0D%0AIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlk%0D%0APSJzdmdfMSIgZmlsbD0ibm9uZSIgZD0ibTAsMGw0OCwwbDAsNDhsLTQ4LDBsMCwtNDh6Ii8+CiAg%0D%0APHBhdGggZmlsbD0iI2ZmZmZmZiIgaWQ9InN2Z18yIiBkPSJtMzguODYsMjUuOTVjMC4wOCwtMC42%0D%0ANCAwLjE0LC0xLjI5IDAuMTQsLTEuOTVzLTAuMDYsLTEuMzEgLTAuMTQsLTEuOTVsNC4yMywtMy4z%0D%0AMWMwLjM4LC0wLjMgMC40OSwtMC44NCAwLjI0LC0xLjI4bC00LC02LjkzYy0wLjI1LC0wLjQzIC0w%0D%0ALjc3LC0wLjYxIC0xLjIyLC0wLjQzbC00Ljk4LDIuMDFjLTEuMDMsLTAuNzkgLTIuMTYsLTEuNDYg%0D%0ALTMuMzgsLTEuOTdsLTAuNzUsLTUuM2MtMC4wOSwtMC40NyAtMC41LC0wLjg0IC0xLC0wLjg0bC04%0D%0ALDBjLTAuNSwwIC0wLjkxLDAuMzcgLTAuOTksMC44NGwtMC43NSw1LjNjLTEuMjIsMC41MSAtMi4z%0D%0ANSwxLjE3IC0zLjM4LDEuOTdsLTQuOTgsLTIuMDFjLTAuNDUsLTAuMTcgLTAuOTcsMCAtMS4yMiww%0D%0ALjQzbC00LDYuOTNjLTAuMjUsMC40MyAtMC4xNCwwLjk3IDAuMjQsMS4yOGw0LjIyLDMuMzFjLTAu%0D%0AMDgsMC42NCAtMC4xNCwxLjI5IC0wLjE0LDEuOTVzMC4wNiwxLjMxIDAuMTQsMS45NWwtNC4yMiwz%0D%0ALjMxYy0wLjM4LDAuMyAtMC40OSwwLjg0IC0wLjI0LDEuMjhsNCw2LjkzYzAuMjUsMC40MyAwLjc3%0D%0ALDAuNjEgMS4yMiwwLjQzbDQuOTgsLTIuMDFjMS4wMywwLjc5IDIuMTYsMS40NiAzLjM4LDEuOTds%0D%0AMC43NSw1LjNjMC4wOCwwLjQ3IDAuNDksMC44NCAwLjk5LDAuODRsOCwwYzAuNSwwIDAuOTEsLTAu%0D%0AMzcgMC45OSwtMC44NGwwLjc1LC01LjNjMS4yMiwtMC41MSAyLjM1LC0xLjE3IDMuMzgsLTEuOTds%0D%0ANC45OCwyLjAxYzAuNDUsMC4xNyAwLjk3LDAgMS4yMiwtMC40M2w0LC02LjkzYzAuMjUsLTAuNDMg%0D%0AMC4xNCwtMC45NyAtMC4yNCwtMS4yOGwtNC4yMiwtMy4zMXptLTE0Ljg2LDUuMDVjLTMuODcsMCAt%0D%0ANywtMy4xMyAtNywtN3MzLjEzLC03IDcsLTdzNywzLjEzIDcsN3MtMy4xMyw3IC03LDd6Ii8+CiA8%0D%0AL2c+Cjwvc3ZnPg=="/>
+      <div class="menu__content"><span class="menu__span">Q & A</span><span class="menu__span">Q & A</span></div>
+    </div>
+    </a>
+    <div class="is-active" id="current"></div>
+  </div>
+</div>
+</div>
 <script>
-$(document).ready(function() {
+/* Const */
+const menuItem = document.querySelectorAll(".menu__item");
+const currentItem = document.querySelector("#current");
+const mov = 188;
+/* Func */
+let getItem = (event) => {
+    let x = event.currentTarget.id.slice("-")[0];
+    let y = event.currentTarget.id.slice("-")[2];
 
-    var $half = $(".circle .half"),
-        halfLen = $half[0].getTotalLength(),
-        $nav = $(".circle .active-nav"),
-        navLen = $nav[0].getTotalLength(),
-        $pages = $(".pages"),
-        scrolling = false,
-        curPage = 1,
-        numOfPages = $(".page").length,
-        headingH = $(".heading").height(),
-        SPHASE1 = 500,
-        SPHASE2 = 300,
-        SPHASE3 = 900,
-        SDELAY = SPHASE1 + SPHASE2 + SPHASE3,
-        SDUR = 600,
-        SDOTS = SDELAY + SDUR,
-        DOTTRANSTIME = 300,
-        SDOTSRDY = SDOTS + DOTTRANSTIME + (numOfPages - 2) * 100,
-        PAGETRANSITION = 700;
+    currentItem.style.left = `${ x * mov }px`;
+    setTimeout( () =>  currentItem.style.top = `${ y * mov }px`, 200 ) ;
 
-    $half.velocity({ strokeDasharray: halfLen, strokeDashoffset: halfLen }, { duration: 0 });
-    $nav.velocity({ strokeDasharray: navLen, strokeDashoffset: navLen }, { duration: 0 });
-    $(".circle").css("opacity", 1);
-    $(".rotater").addClass("phase1");
-
-    setTimeout(function() {
-        $(".rotater").removeClass("phase1").addClass("phase2");
-
-        setTimeout(function() {
-            $(".rotater").removeClass("phase2").addClass("phase3");
-        }, SPHASE2);
-
-    }, SPHASE1);
-
-    $half.delay(SDELAY).velocity({ strokeDashoffset: 0 }, { duration: SDUR, easing: "ease-in" });
-
-    setTimeout(function() {
-        $(".nav-el").addClass("showing visible");
-    }, SDOTS);
-
-    setTimeout(function() {
-        $(".nav-el").removeClass("showing").addClass("white");
-        $(".nav-el-1").addClass("active");
-        $(".heading").removeClass("invisible");
-        $pages.removeClass("removed");
-
-        setTimeout(function() {
-            activateHandlers();
-        }, PAGETRANSITION + 300);
-    }, SDOTSRDY);
-
-    function pagination(page) {
-        scrolling = true;
-        curPage = page;
-        $(".nav-el").removeClass("active");
-        $(".nav-el-" + page).addClass("active");
-        var newNavLen = navLen - navLen / 6 * (page - 1);
-        $nav.velocity({ strokeDashoffset: newNavLen }, { duration: PAGETRANSITION });
-        $(".numbers").css("transform", "translateY(" + (0 - (page - 1) * headingH) + "px)");
-        $pages.css("transform", "translate3D(0," + (0 - (page - 1) * 100) + "%,0)");
-
-        setTimeout(function() {
-            scrolling = false;
-        }, PAGETRANSITION);
+}
+/* Main */
+let mainFunction = (event) => {
+    for (var i = 0; i < menuItem.length; i++) {
+        menuItem[i].addEventListener("click", getItem);
     }
+}
 
-    function navigateUp() {
-        if (curPage > 1) {
-            curPage--;
-            pagination(curPage);
-        }
-    }
+window.addEventListener("load", mainFunction);
 
-    function navigateDown() {
-        if (curPage < numOfPages) {
-            curPage++;
-            pagination(curPage);
-        }
-    }
-
-    function activateHandlers() {
-
-        $(document).on("mousewheel DOMMouseScroll", function(e) {
-            if (!scrolling) {
-                if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-                    navigateUp();
-                } else {
-                    navigateDown();
-                }
-            }
-        });
-
-        $(document).on("click", ".nav-el", function() {
-            var pg = +$(this).attr("data-page");
-            pagination(pg);
-        });
-
-        $(document).on("keydown", function(e) {
-            if (scrolling) return;
-            if (e.which === 38) {
-                navigateUp();
-            } else if (e.which === 40) {
-                navigateDown();
-            }
-        });
-
-        $(window).resize(function() {
-            headingH = $(".heading").height();
-        });
-
-    }
-
-    var diff = 0;
-
-    $(document).on("touchstart", ".page", function(e) {
-        var startY = e.originalEvent.touches[0].pageY;
-        $pages.addClass("instant");
-
-        $(document).on("touchmove", function(e) {
-            var y = e.originalEvent.touches[0].pageY;
-            diff = (y - startY) / $(".page").height();
-            $pages.css("transform", "translate3D(0," + (0 - (curPage - 1 - diff) * 100) + "%,0)");
-
-        });
-
-    });
-
-    $(document).on("touchend", function(e) {
-        $pages.removeClass("instant");
-        $(document).off("touchmove");
-        if (diff > 0.05) {
-            if (curPage === 1) {
-                pagination(1);
-                diff = 0;
-                return;
-            }
-            navigateUp();
-        } else if (diff < -0.05) {
-            if (curPage === numOfPages) {
-                pagination(numOfPages);
-                diff = 0;
-                return;
-            }
-            navigateDown();
-        } else if (!diff) {
-            return;
-        } else {
-            $pages.css("transform", "translate3D(0," + (0 - (curPage - 1) * 100) + "%,0)");
-        }
-        diff = 0;
-// sessionStorage.setItem("animeRan", 'yes');
-    });
-});
 </script>
-
