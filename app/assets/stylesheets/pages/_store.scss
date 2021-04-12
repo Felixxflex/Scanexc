@@ -590,6 +590,25 @@ $bkBtnSize: 52px;
     }
 }
 
+.clearbtnchart {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.clearbtndrop {
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+    margin-bottom: 7rem;
+}
+
+.clearbtnquestion {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
 //drop shop new color
 .newtech {
     color: black !important;

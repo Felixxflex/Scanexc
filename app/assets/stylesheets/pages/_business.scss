@@ -89,7 +89,7 @@ $animationSpeed: 40s;
 
 .counter .counter-icon {
     color: #fff;
-    background: linear-gradient(#F83F83, #E2056F);
+    background: linear-gradient(#1aeaf1, #1aeaf1);
     line-height: 70px;
     font-size: 35px;
     height: 70px;
@@ -113,7 +113,7 @@ $animationSpeed: 40s;
 
 .counter h3 {
     color: #fff;
-    background: linear-gradient(#F83F83, #E2056F);
+    background: linear-gradient(#1aeaf1, #1aeaf1);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -127,7 +127,7 @@ $animationSpeed: 40s;
 .counter h3:before,
 .counter h3:after {
     content: "";
-    background: linear-gradient(to right bottom, transparent 49%, #c90460 50%);
+    background: linear-gradient(to right bottom, transparent 49%, #1aeaf1 50%);
     width: 20px;
     height: 20px;
     position: absolute;
@@ -144,12 +144,12 @@ $animationSpeed: 40s;
 
 .counter.purple .counter-icon,
 .counter.purple h3 {
-    background: linear-gradient(#B05FDF, #7B26DD);
+    background: linear-gradient(#88f168, #88f168);
 }
 
 .counter.purple h3:before,
 .counter.purple h3:after {
-    background: linear-gradient(to right bottom, transparent 49%, #5a07bf 50%);
+    background: linear-gradient(to right bottom, transparent 49%, #88f168 50%);
 }
 
 .counter.blue .counter-icon,
